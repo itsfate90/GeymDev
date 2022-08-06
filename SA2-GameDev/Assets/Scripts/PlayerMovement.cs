@@ -9,11 +9,14 @@ public class PlayerMovement : MonoBehaviour
     float horizontalMove = 0f;
     public float runSpeed = 200;
     bool jump = false;
+    
+    private Vector3 respawnPoint;
+    public GameObject FallDetector;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        respawnPoint = transform.position;
     }
 
     // Update is called once per frame
@@ -31,8 +34,18 @@ public class PlayerMovement : MonoBehaviour
            
         }
 
+        FallDetector.transform.position = new Vector2(transform.position.x, FallDetector.transform.position.y);
 
 
+
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "FallDetector")
+        {
+            transform.position = respawnPoint;
+        }
     }
     public void Onlanding()
     {
