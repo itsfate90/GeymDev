@@ -390,6 +390,7 @@ MonoBehaviour:
   controller: {fileID: 360891823}
   animator: {fileID: 360891825}
   runSpeed: 200
+  FallDetector: {fileID: 0}
 --- !u!95 &360891825
 Animator:
   serializedVersion: 4
@@ -934,7 +935,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.2391305, y: 1}
+    m_SensorSize: {x: 2.4244394, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -995,7 +996,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 0.64, y: 0.64}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -1060,7 +1061,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 8497863495447063480, guid: 1b39c0fe73f0433468e25eb21cfde7c2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ccf525696eb0d954eab157f2ff501214, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1079,8 +1080,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1934761359}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -52.2, y: 5.3, z: 0}
-  m_LocalScale: {x: 1, y: 4.4496, z: 1}
+  m_LocalPosition: {x: -52.2, y: 5.79, z: 0}
+  m_LocalScale: {x: 4.9266477, y: 9.131827, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
