@@ -34,19 +34,13 @@ public class PlayerMovement : MonoBehaviour
            
         }
 
-        FallDetector.transform.position = new Vector2(transform.position.x, FallDetector.transform.position.y);
+        
 
 
 
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.tag == "FallDetector")
-        {
-            transform.position = respawnPoint;
-        }
-    }
+   
     public void Onlanding()
     {
         animator.SetBool("IsJumping", false);
