@@ -10,13 +10,11 @@ public class PlayerMovement : MonoBehaviour
     public float runSpeed = 200;
     bool jump = false;
     
-    private Vector3 respawnPoint;
-    public GameObject FallDetector;
-
+    
     // Start is called before the first frame update
     void Start()
     {
-        respawnPoint = transform.position;
+        
     }
 
     // Update is called once per frame
@@ -31,13 +29,7 @@ public class PlayerMovement : MonoBehaviour
         {
             jump = true;
             animator.SetBool("IsJumping", true);
-           
         }
-
-        
-
-
-
     }
 
    

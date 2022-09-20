@@ -6,6 +6,7 @@ TagManager:
   tags:
   - FallDetector
   - Coin
+  - Teleporter
   layers:
   - Default
   - TransparentFX
