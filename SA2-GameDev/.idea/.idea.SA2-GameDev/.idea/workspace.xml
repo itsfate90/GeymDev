@@ -39,7 +39,7 @@
       <method v="2" />
     </configuration>
     <configuration name="UnitTests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2021.3.4f1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2021.3.10f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath C:\Users\Raphael\OneDrive\Documents\GitHub\GeymDev\SA2-GameDev -testResults Logs/results.xml -testPlatform EditMode -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="C:\Users\Raphael\OneDrive\Documents\GitHub\GeymDev\SA2-GameDev" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -83,6 +83,8 @@
       <workItem from="1663571126527" duration="358000" />
       <workItem from="1663597913525" duration="1000" />
       <workItem from="1663644410885" duration="68000" />
+      <workItem from="1663666100685" duration="67000" />
+      <workItem from="1663666204092" duration="2000" />
     </task>
     <servers />
   </component>
