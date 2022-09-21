@@ -8,6 +8,7 @@ TagManager:
   - Teleporter
   - FallDetector
   - FallDetector2
+  - Checkpoint
   layers:
   - Default
   - TransparentFX
