@@ -4,9 +4,10 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - FallDetector
   - Coin
   - Teleporter
+  - FallDetector
+  - FallDetector2
   layers:
   - Default
   - TransparentFX
