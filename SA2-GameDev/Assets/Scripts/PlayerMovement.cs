@@ -7,7 +7,7 @@ public class PlayerMovement : MonoBehaviour
     public CharacterController2D controller;
     public Animator animator;
     float horizontalMove = 0f;
-    public float runSpeed = 200;
+    public float runSpeed = 150;
     bool jump = false;
     
     
