@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 302a4193368ec9542845b4cb9b244867
+guid: f14e63135570fbb4dad830c3b352c90a
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -42,12 +42,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 150
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -115,70 +115,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: Carabao_0
-      rect:
-        serializedVersion: 2
-        x: 71
-        y: 224
-        width: 524
-        height: 350
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 89a2f8ee7c3686a4da4743e7eeecec16
-      internalID: -1576457944
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Carabao_1
-      rect:
-        serializedVersion: 2
-        x: 595
-        y: 385
-        width: 49
-        height: 161
-      alignment: 9
-      pivot: {x: 0.16329893, y: 0.8879368}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3b307ae211ec54a4ca60ba6e9a90ea7a
-      internalID: -65920173
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Carabao_2
-      rect:
-        serializedVersion: 2
-        x: 211
-        y: 49
-        width: 481
-        height: 98
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 46cb8657adc5e6f4c9bd25009ead5652
-      internalID: 531370251
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
@@ -189,12 +126,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      Carabao_2: 531370251
-      Carabao_3: 1781919743
-      Carabao_4: 917559969
-      Carabao_1: -65920173
-      Carabao_0: -1576457944
+    nameFileIdTable: {}
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
