@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,9 +8,13 @@ public class Pause : MonoBehaviour
 {
     public static bool isPaused = false;
     [SerializeField]  GameObject pauseMenu;
- 
 
-  
+
+    private void Start()
+    {
+        Time.timeScale = 1f;
+    }
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))

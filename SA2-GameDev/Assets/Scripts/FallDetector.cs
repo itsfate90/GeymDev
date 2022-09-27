@@ -8,7 +8,8 @@ public class FallDetector : MonoBehaviour
     public Vector3 respawnPoint;
     public GameObject fallDetector;
     public GameObject fallDetector2;
-    
+
+    [SerializeField] GameObject screenDeath;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,15 +28,27 @@ public class FallDetector : MonoBehaviour
     {
         if (collision.tag == "FallDetector")
         {
-            transform.position = respawnPoint;
+            screenDeath.SetActive(true);
+            Time.timeScale = 0f;
+            //transform.position = respawnPoint;
         }
         else if (collision.tag == "FallDetector2")
         {
-            transform.position = respawnPoint;
+            screenDeath.SetActive(true);
+            Time.timeScale = 0f;
+            //transform.position = respawnPoint;
         }
         else if (collision.tag == "Checkpoint")
         {
             respawnPoint = transform.position;
         }
+        
+    }
+
+    public void respawnButton()
+    {
+        screenDeath.SetActive(false);
+        Time.timeScale = 1f;
+        transform.position = respawnPoint;
     }
 }
