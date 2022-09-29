@@ -1,0 +1,1301 @@
+fileFormatVersion: 2
+guid: a6faf2c3d80a8fa459d214455bba3389
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 1080
+  spriteBorder: {x: 0, y: 0, z: 0, w: 266}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Medival_banners_1080CanvasHD_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 959
+        width: 67
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3572de20dc5b973438880e86f80222a0
+      internalID: 325038578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Medival_banners_1080CanvasHD_1
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 974
+        width: 473
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c392781193592ce48a92ddb7ae99fc52
+      internalID: 1047943343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Medival_banners_1080CanvasHD_2
+      rect:
+        serializedVersion: 2
+        x: 553
+        y: 993
+        width: 105
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85ae601cd64762547971e5c2a081d9ce
+      internalID: -1086808508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Medival_banners_1080CanvasHD_3
+      rect:
+        serializedVersion: 2
+        x: 683
+        y: 967
+        width: 119
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1550d988abee52046975403138c5c57a
+      internalID: -351825398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Medival_banners_1080CanvasHD_4
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 974
+        width: 270
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa7c10876a8640e42afa4772323bddaa
+      internalID: 161714365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Medival_banners_1080CanvasHD_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 865
+        width: 202
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f47616d7086e40040801e4742266a871
+      internalID: -1635349159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Medival_banners_1080CanvasHD_6
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 838
+        width: 59
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de4babaa83eb59248960ce44755b70b9
+      internalID: 604940662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Medival_banners_1080CanvasHD_7
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 838
+        width: 59
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13b02fb2646b3884f8dc9cac87cebd08
+      internalID: -876424760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Medival_banners_1080CanvasHD_8
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 838
+        width: 59
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fb64410f9bb23942a0e7c3853a63ae9
+      internalID: 1202954166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Medival_banners_1080CanvasHD_9
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 853
+        width: 675
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 604bc41568584df4e845cc4337ec9ad0
+      internalID: 1039019293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Medival_banners_1080CanvasHD_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 733
+        width: 1080
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b3454fde8530a441b66188485d9db7c
+      internalID: -1378075224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Medival_banners_1080CanvasHD_11
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 672
+        width: 46
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86c62073dacb9d246af626aa14eb1d62
+      internalID: -1127450086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Medival_banners_1080CanvasHD_12
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 672
+        width: 47
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 974c64a8889efe94ca6e1de2bf94e642
+      internalID: -1926986662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Medival_banners_1080CanvasHD_13
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 672
+        width: 46
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6654b96e28f52c240b1147780617846d
+      internalID: -632700676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Medival_banners_1080CanvasHD_14
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 608
+        width: 878
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3953102e235dd934fade3925ec271640
+      internalID: -1696379752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Medival_banners_1080CanvasHD_15
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 608
+        width: 46
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f562180cd522e1b4c96461d4d75c3779
+      internalID: 28890719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Medival_banners_1080CanvasHD_16
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 604
+        width: 47
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85341645c4108db4f87883467a44bc35
+      internalID: 768535304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Medival_banners_1080CanvasHD_17
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 604
+        width: 46
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aad345a6da1b72b4dbf8a53f7e1961a0
+      internalID: 421288193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Medival_banners_1080CanvasHD_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 480
+        width: 135
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a75f878ba6ddd604ca8a8a481f643ff2
+      internalID: -245394123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Medival_banners_1080CanvasHD_19
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 480
+        width: 109
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d225ecf43db49a43950af0159fb9e29
+      internalID: -244846629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Medival_banners_1080CanvasHD_20
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 480
+        width: 119
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10d9f9d5b0a7da04d9942defb1f82f29
+      internalID: -866401876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Medival_banners_1080CanvasHD_21
+      rect:
+        serializedVersion: 2
+        x: 443
+        y: 480
+        width: 59
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69f3190b36665fd4f99a0fee8ee9b7da
+      internalID: 781469158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Medival_banners_1080CanvasHD_22
+      rect:
+        serializedVersion: 2
+        x: 553
+        y: 480
+        width: 109
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0ff3847784a9f641b696c670de4b668
+      internalID: -1728764858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Medival_banners_1080CanvasHD_23
+      rect:
+        serializedVersion: 2
+        x: 679
+        y: 480
+        width: 118
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c3858a7e405913489fe3dd57bc188a9
+      internalID: -1676383998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Medival_banners_1080CanvasHD_24
+      rect:
+        serializedVersion: 2
+        x: 848
+        y: 480
+        width: 59
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94d4d990f9e47fe459160b298763b6a6
+      internalID: 1975714099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Medival_banners_1080CanvasHD_25
+      rect:
+        serializedVersion: 2
+        x: 945
+        y: 480
+        width: 135
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 160d33c9d9d5a0544b9a433725cb9d98
+      internalID: 89793254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Medival_banners_1080CanvasHD_26
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 359
+        width: 270
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94d2d430fa32e3841be056bd28ffb3f4
+      internalID: 1688816901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Medival_banners_1080CanvasHD_27
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 359
+        width: 119
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f5db842b3b0d64448d250bd413fdeb4
+      internalID: 469261811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Medival_banners_1080CanvasHD_28
+      rect:
+        serializedVersion: 2
+        x: 409
+        y: 359
+        width: 127
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e003034fda478674fadf726397917b94
+      internalID: -1330276919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Medival_banners_1080CanvasHD_29
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 359
+        width: 135
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd9c7e68feb21d54089c791808c65213
+      internalID: -100255546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Medival_banners_1080CanvasHD_30
+      rect:
+        serializedVersion: 2
+        x: 679
+        y: 359
+        width: 118
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 578240b31200659429525df4d3177663
+      internalID: -768948057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Medival_banners_1080CanvasHD_31
+      rect:
+        serializedVersion: 2
+        x: 814
+        y: 359
+        width: 127
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b184bad2557844540b2b784cfa851ba7
+      internalID: 1867692709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Medival_banners_1080CanvasHD_32
+      rect:
+        serializedVersion: 2
+        x: 945
+        y: 359
+        width: 135
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 218a9e8552021be4aa1a8d73bffa6aaa
+      internalID: 1152521454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Medival_banners_1080CanvasHD_33
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 238
+        width: 109
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e422a18b5af9c374bb5dd42fc6940e29
+      internalID: -631687184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Medival_banners_1080CanvasHD_34
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 238
+        width: 135
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 588ba4d34543a2642bba00af5ff914a7
+      internalID: 1711176882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Medival_banners_1080CanvasHD_35
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 245
+        width: 59
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6adac8dec4158b04e95ea1768414ab14
+      internalID: -255003492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Medival_banners_1080CanvasHD_36
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 245
+        width: 59
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1cc0990f041b974e80c542d81a544db
+      internalID: 1590057886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Medival_banners_1080CanvasHD_37
+      rect:
+        serializedVersion: 2
+        x: 409
+        y: 238
+        width: 127
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31d6a999f4a98914f81b8d45ccd705a8
+      internalID: -811909081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Medival_banners_1080CanvasHD_38
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 238
+        width: 135
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5e18ac0507c4d642837f5b2bfcdc42d
+      internalID: -1257567893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Medival_banners_1080CanvasHD_39
+      rect:
+        serializedVersion: 2
+        x: 683
+        y: 238
+        width: 119
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b7c39aa54f29d14ca1762fb3387f79f
+      internalID: 1256097505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Medival_banners_1080CanvasHD_40
+      rect:
+        serializedVersion: 2
+        x: 814
+        y: 238
+        width: 127
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd9f20050f11f4d4f948fa975729194f
+      internalID: -101935731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Medival_banners_1080CanvasHD_41
+      rect:
+        serializedVersion: 2
+        x: 945
+        y: 238
+        width: 135
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dba1267633b679c40839ec7ec6b2ee70
+      internalID: -1233122730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Medival_banners_1080CanvasHD_42
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 117
+        width: 270
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 141090aff3496934f85079c16df1537e
+      internalID: -1514785449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Medival_banners_1080CanvasHD_43
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 132
+        width: 59
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 973ff178226cdc84aa3565dfc11a95dc
+      internalID: -1863998815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Medival_banners_1080CanvasHD_44
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 132
+        width: 59
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 223895b9dd4a9a94ea0d36c32a6da3a0
+      internalID: 1735142451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Medival_banners_1080CanvasHD_45
+      rect:
+        serializedVersion: 2
+        x: 409
+        y: 117
+        width: 127
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8121f39936c84104fb56c6c12a74f444
+      internalID: -723758462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Medival_banners_1080CanvasHD_46
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 117
+        width: 135
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd1d63e7ff747324fb63b85c7f56fb81
+      internalID: -1424073718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Medival_banners_1080CanvasHD_47
+      rect:
+        serializedVersion: 2
+        x: 683
+        y: 117
+        width: 119
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96e2e225ea9bbcc4cb00859fe8d44292
+      internalID: 85122601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Medival_banners_1080CanvasHD_48
+      rect:
+        serializedVersion: 2
+        x: 814
+        y: 117
+        width: 127
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76e3c41f4ecd9884a9012fc349dc29b9
+      internalID: 721424929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Medival_banners_1080CanvasHD_49
+      rect:
+        serializedVersion: 2
+        x: 945
+        y: 117
+        width: 135
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 906f059fde3536242a484c70a801a158
+      internalID: -830397608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Medival_banners_1080CanvasHD_50
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 15
+        width: 333
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a8e43b21415560499e1a992079463f1
+      internalID: 1582179739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Medival_banners_1080CanvasHD_51
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 8
+        width: 269
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07d412e00c7096e4f8f2130d33abf8f8
+      internalID: 675838080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Medival_banners_1080CanvasHD_52
+      rect:
+        serializedVersion: 2
+        x: 612
+        y: 8
+        width: 468
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dab29804339bf6348b891f9f43623640
+      internalID: 1080917814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 1537655665
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Medival_banners_1080CanvasHD_43: -1863998815
+      Medival_banners_1080CanvasHD_8: 1202954166
+      Medival_banners_1080CanvasHD_44: 1735142451
+      Medival_banners_1080CanvasHD_11: -1127450086
+      Medival_banners_1080CanvasHD_18: -245394123
+      Medival_banners_1080CanvasHD_26: 1688816901
+      Medival_banners_1080CanvasHD_28: -1330276919
+      Medival_banners_1080CanvasHD_12: -1926986662
+      Medival_banners_1080CanvasHD_45: -723758462
+      Medival_banners_1080CanvasHD_15: 28890719
+      Medival_banners_1080CanvasHD_42: -1514785449
+      Medival_banners_1080CanvasHD_40: -101935731
+      Medival_banners_1080CanvasHD_23: -1676383998
+      Medival_banners_1080CanvasHD_38: -1257567893
+      Medival_banners_1080CanvasHD_51: 675838080
+      Medival_banners_1080CanvasHD_32: 1152521454
+      Medival_banners_1080CanvasHD_30: -768948057
+      Medival_banners_1080CanvasHD_6: 604940662
+      Medival_banners_1080CanvasHD_33: -631687184
+      Medival_banners_1080CanvasHD_41: -1233122730
+      Medival_banners_1080CanvasHD_9: 1039019293
+      Medival_banners_1080CanvasHD_3: -351825398
+      Medival_banners_1080CanvasHD_52: 1080917814
+      Medival_banners_1080CanvasHD_37: -811909081
+      Medival_banners_1080CanvasHD_50: 1582179739
+      Medival_banners_1080CanvasHD_5: -1635349159
+      Medival_banners_1080CanvasHD_14: -1696379752
+      Medival_banners_1080CanvasHD_1: 1047943343
+      Medival_banners_1080CanvasHD_19: -244846629
+      Medival_banners_1080CanvasHD_47: 85122601
+      Medival_banners_1080CanvasHD_22: -1728764858
+      Medival_banners_1080CanvasHD_4: 161714365
+      Medival_banners_1080CanvasHD_46: -1424073718
+      Medival_banners_1080CanvasHD_35: -255003492
+      Medival_banners_1080CanvasHD_2: -1086808508
+      Medival_banners_1080CanvasHD_13: -632700676
+      Medival_banners_1080CanvasHD_34: 1711176882
+      Medival_banners_1080CanvasHD_20: -866401876
+      Medival_banners_1080CanvasHD_39: 1256097505
+      Medival_banners_1080CanvasHD_27: 469261811
+      Medival_banners_1080CanvasHD_24: 1975714099
+      Medival_banners_1080CanvasHD_29: -100255546
+      Medival_banners_1080CanvasHD_21: 781469158
+      Medival_banners_1080CanvasHD_10: -1378075224
+      Medival_banners_1080CanvasHD_16: 768535304
+      Medival_banners_1080CanvasHD_36: 1590057886
+      Medival_banners_1080CanvasHD_31: 1867692709
+      Medival_banners_1080CanvasHD_0: 325038578
+      Medival_banners_1080CanvasHD_17: 421288193
+      Medival_banners_1080CanvasHD_48: 721424929
+      Medival_banners_1080CanvasHD_49: -830397608
+      Medival_banners_1080CanvasHD_25: 89793254
+      Medival_banners_1080CanvasHD_7: -876424760
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
