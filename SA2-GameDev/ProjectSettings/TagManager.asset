@@ -9,6 +9,7 @@ TagManager:
   - FallDetector
   - FallDetector2
   - Checkpoint
+  - Platform
   layers:
   - Default
   - TransparentFX
