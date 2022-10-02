@@ -10,6 +10,7 @@ TagManager:
   - FallDetector2
   - Checkpoint
   - Platform
+  - DialogueTrigger_1
   layers:
   - Default
   - TransparentFX
