@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class FallingPLatform : MonoBehaviour
 {
+   
     private float fallDelay = 0.5f;
     private float destroyDelay = 2f;
 
@@ -17,6 +18,8 @@ public class FallingPLatform : MonoBehaviour
    
    private IEnumerator Fall(){
     yield return new WaitForSeconds(fallDelay);
+    PlatformManager.Instance.StartCoroutine("SpawnPlatform",
+    new Vector2(transform.position.x,transform.position.y));
     rb.bodyType = RigidbodyType2D.Dynamic;
     Destroy(gameObject, destroyDelay);
    }
