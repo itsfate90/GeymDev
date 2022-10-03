@@ -2,15 +2,16 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.TextCore.Text;
 
 public class DialogueTrigger : MonoBehaviour
 {
     //public GameObject DialogueTrigger_1;
 
     public static bool isDialogueTriggered = false;
-    public static bool isDialogue_1_triggered = false;
-    public static bool isDialogue_2_triggered = false;
-    public static bool isDialogue_3_triggered = false;
+   // public static bool isDialogue_1_triggered = false;
+    //public static bool isDialogue_2_triggered = false;
+    //public static bool isDialogue_3_triggered = false;
     [SerializeField] GameObject Dialogue_1;
     [SerializeField] GameObject Dialogue_2;
     [SerializeField] GameObject Dialogue_3;
@@ -19,7 +20,10 @@ public class DialogueTrigger : MonoBehaviour
     
     void Start()
     {
-        
+        Dialogue_1.SetActive(false);
+        Dialogue_2.SetActive(false);
+        Dialogue_3.SetActive(false);
+
     }
 
     // Update is called once per frame
@@ -31,62 +35,34 @@ public class DialogueTrigger : MonoBehaviour
     {
         if (collision.tag == "DialogueTrigger_1")
         {
-            
             isDialogueTriggered = true;
-            isDialogue_1_triggered = true;
+        }
+    }
 
-            Dialogue_1.SetActive(true);
-            Dialogue_2.SetActive(false);
-            Time.timeScale = 0f;
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.tag == "DialogueTrigger_1")
+        {
+            isDialogueTriggered = true;
+            StartCoroutine(WaitBeforeShow());
 
         }
     }
 
-   
-
-    public void ContinueButton()
+    IEnumerator WaitBeforeShow()
     {
-        if (isDialogueTriggered)
-        {
-            if (isDialogue_1_triggered)
-            {
-                isDialogue_1_triggered = false;
-                isDialogue_3_triggered = false;
-                Dialogue_1.SetActive(false);
-                Dialogue_3.SetActive(false);
-                
-                Dialogue_2.SetActive(true);
-                isDialogue_2_triggered = true;
-                Time.timeScale = 0f;
-            }
-            else if (isDialogue_2_triggered)
-            {
-                isDialogue_1_triggered = false;
-                isDialogue_2_triggered = false;
-                Dialogue_1.SetActive(false);
-                Dialogue_2.SetActive(false);
-                
-                Dialogue_3.SetActive(true);
-                isDialogue_3_triggered = true;
-                Time.timeScale = 0f;
-            }
-            else if (isDialogue_3_triggered)
-            {
-                isDialogueTriggered = false;
-                isDialogue_1_triggered = false;
-                isDialogue_2_triggered = false;
-                isDialogue_3_triggered = false;
-                Dialogue_1.SetActive(false);
-                Dialogue_2.SetActive(false);
-                Dialogue_3.SetActive(false);
-                
-                Time.timeScale = 1f;
-
-            }
-            
-                
-        }
-           
- 
+        Dialogue_1.SetActive(true);
+        yield return new WaitForSeconds(2);
+        Dialogue_1.SetActive(false);
+        Dialogue_2.SetActive(true);
+        yield return new WaitForSeconds(2);
+        Dialogue_1.SetActive(false);
+        Dialogue_2.SetActive(true);
+        yield return new WaitForSeconds(2);
+        Dialogue_2.SetActive(false);
+        Dialogue_3.SetActive(true);
+        yield return new WaitForSeconds(2);
+        Dialogue_3.SetActive(false);
+        isDialogueTriggered = false;
     }
 }
