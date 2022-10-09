@@ -52,16 +52,16 @@ public class DialogueTrigger : MonoBehaviour
     IEnumerator WaitBeforeShow()
     {
         Dialogue_1.SetActive(true);
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(1);
         Dialogue_1.SetActive(false);
         Dialogue_2.SetActive(true);
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(1);
         Dialogue_1.SetActive(false);
         Dialogue_2.SetActive(true);
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(1);
         Dialogue_2.SetActive(false);
         Dialogue_3.SetActive(true);
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(1);
         Dialogue_3.SetActive(false);
         isDialogueTriggered = false;
     }
