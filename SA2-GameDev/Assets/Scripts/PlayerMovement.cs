@@ -9,12 +9,11 @@ public class PlayerMovement : MonoBehaviour
     float horizontalMove = 0f;
     public float runSpeed = 150;
     bool jump = false;
-    
-    
+    [SerializeField] private AudioSource jumpSoundEffect;
     // Start is called before the first frame update
     void Start()
     {
-        
+      
     }
 
     // Update is called once per frame
@@ -23,12 +22,14 @@ public class PlayerMovement : MonoBehaviour
         horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
 
         animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
-
+      
 
         if (Input.GetButtonDown("Jump"))
-        {
+        {   
             jump = true;
+            jumpSoundEffect.Play();
             animator.SetBool("IsJumping", true);
+           
         }
     }
 
@@ -36,6 +37,7 @@ public class PlayerMovement : MonoBehaviour
     public void Onlanding()
     {
         animator.SetBool("IsJumping", false);
+       
     }
    
 
