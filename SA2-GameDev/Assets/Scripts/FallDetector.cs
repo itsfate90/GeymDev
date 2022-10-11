@@ -32,7 +32,7 @@ public class FallDetector : MonoBehaviour
             Time.timeScale = 0f;
             //transform.position = respawnPoint;
         }
-        else if (collision.tag == "FallDetector2")
+        else if (collision.tag == "FallDetector2") // create new tag for trap and copy paste the folllowing
         {
             screenDeath.SetActive(true);
             Time.timeScale = 0f;
