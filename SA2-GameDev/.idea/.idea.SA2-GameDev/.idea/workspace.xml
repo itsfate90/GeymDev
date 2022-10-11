@@ -10,6 +10,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/LoadAfterTime2.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerTeleportation.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/WarningTrigger.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -97,7 +98,7 @@
       <workItem from="1664756246348" duration="1566000" />
       <workItem from="1665320754808" duration="41000" />
       <workItem from="1665321396786" duration="69000" />
-      <workItem from="1665481906477" duration="1750000" />
+      <workItem from="1665481906477" duration="4569000" />
     </task>
     <servers />
   </component>

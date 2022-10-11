@@ -11,6 +11,8 @@ TagManager:
   - Checkpoint
   - Platform
   - DialogueTrigger_1
+  - DialogueTrigger_2
+  - WarningTrigger
   layers:
   - Default
   - TransparentFX
