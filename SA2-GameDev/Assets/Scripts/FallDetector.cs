@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class FallDetector : MonoBehaviour
@@ -7,6 +8,7 @@ public class FallDetector : MonoBehaviour
     public GameObject fallDetector2;
 
     [SerializeField] GameObject screenDeath;
+    [SerializeField] GameObject Checkpoint;
     void Start()
     {
         respawnPoint = transform.position;
@@ -32,6 +34,15 @@ public class FallDetector : MonoBehaviour
         else if (collision.CompareTag("Checkpoint"))
         {
             respawnPoint = transform.position;
+            Checkpoint.SetActive(true);
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Checkpoint"))
+        {
+            Checkpoint.SetActive(false);
         }
     }
 
