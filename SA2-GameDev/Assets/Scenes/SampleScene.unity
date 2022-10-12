@@ -2233,7 +2233,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 280318872}
         m_TargetAssemblyTypeName: FallDetector, Assembly-CSharp
-        m_MethodName: respawnButton
+        m_MethodName: RespawnButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
