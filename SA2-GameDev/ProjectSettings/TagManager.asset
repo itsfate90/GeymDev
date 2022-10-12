@@ -13,6 +13,7 @@ TagManager:
   - DialogueTrigger_1
   - DialogueTrigger_2
   - WarningTrigger
+  - Enemy
   layers:
   - Default
   - TransparentFX

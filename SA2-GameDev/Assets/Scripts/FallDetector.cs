@@ -36,6 +36,11 @@ public class FallDetector : MonoBehaviour
             respawnPoint = transform.position;
             Checkpoint.SetActive(true);
         }
+          else if (collision.CompareTag("Enemy"))
+        {
+            screenDeath.SetActive(true);
+            Time.timeScale = 0f;
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
