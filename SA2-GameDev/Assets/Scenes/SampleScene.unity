@@ -1853,7 +1853,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.8726298, y: 1}
+    m_SensorSize: {x: 1.6417971, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -1870,7 +1870,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 182066950}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 101.2, y: 6.3, z: -10}
+  m_LocalPosition: {x: -164, y: 6.3, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3082,7 +3082,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 280318859}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 101.2, y: 6.3, z: 0}
+  m_LocalPosition: {x: -164, y: 6.3, z: 0}
   m_LocalScale: {x: 6.7695417, y: 6.600541, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3276,10 +3276,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5064cb9374054f640b61c8b271ed52d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Dialogue_1: {fileID: 1448690297}
-  Dialogue_2: {fileID: 1973916670}
-  Dialogue_3: {fileID: 5809268}
-  Dialogue_4: {fileID: 237307645}
+  dialogue1: {fileID: 1448690297}
+  dialogue2: {fileID: 1973916670}
+  dialogue3: {fileID: 5809268}
+  dialogue4: {fileID: 237307645}
 --- !u!82 &280318875
 AudioSource:
   m_ObjectHideFlags: 0
@@ -6409,7 +6409,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 101.2, y: 6.3, z: -10}
+  m_LocalPosition: {x: -164, y: 6.3, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -39609,7 +39609,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1523431247}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -16.27, y: -7.14, z: 0}
+  m_LocalPosition: {x: -16.27, y: -7.193, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -39629,7 +39629,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.96621704, y: 2.630266}
+  m_Offset: {x: 0.96621704, y: -0.444672}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -39640,7 +39640,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.932434, y: 6.260532}
+  m_Size: {x: 2.932434, y: 0.11065602}
   m_EdgeRadius: 0
 --- !u!1 &1527715113
 GameObject:
@@ -39963,7 +39963,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1537755267}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -16.14, y: -7.14, z: 0}
+  m_LocalPosition: {x: -16.14, y: -7.35, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

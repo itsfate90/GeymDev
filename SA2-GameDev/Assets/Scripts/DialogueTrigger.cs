@@ -1,19 +1,17 @@
-using System;
+
 using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
-using UnityEngine.TextCore.Text;
+
 
 public class DialogueTrigger : MonoBehaviour
 {
-    //public GameObject DialogueTrigger_1;
-
-    private static bool isDialogueTriggered_1 = false;
-    private static bool isDialogueTriggered_2 = false;
-    [SerializeField] GameObject Dialogue_1;
-    [SerializeField] GameObject Dialogue_2;
-    [SerializeField] GameObject Dialogue_3;
-    [SerializeField] GameObject Dialogue_4;
+    private static bool _isDialogueTriggered1;
+    private static bool _isDialogueTriggered2;
+    [SerializeField] GameObject dialogue1;
+    [SerializeField] GameObject dialogue2;
+    [SerializeField] GameObject dialogue3;
+    [SerializeField] GameObject dialogue4;
     
 
     
@@ -22,28 +20,28 @@ public class DialogueTrigger : MonoBehaviour
     
     void Start()
     {
-        Dialogue_1.SetActive(false);
-        Dialogue_2.SetActive(false);
-        Dialogue_3.SetActive(false);
-        Dialogue_4.SetActive(false);
+        dialogue1.SetActive(false);
+        dialogue2.SetActive(false);
+        dialogue3.SetActive(false);
+        dialogue4.SetActive(false);
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (!isDialogueTriggered_1)
+        if (!_isDialogueTriggered1)
         {
-            if (collision.tag == "DialogueTrigger_1")
+            if (collision.CompareTag("DialogueTrigger_1"))
             {
-                isDialogueTriggered_1 = true;
+                _isDialogueTriggered1 = true;
                 StartCoroutine(WaitBeforeShow());
             }
         }
 
-        if (!isDialogueTriggered_2)
+        if (!_isDialogueTriggered2)
         {
-            if(collision.tag == "DialogueTrigger_2")
+            if(collision.CompareTag("DialogueTrigger_2"))
             {
-                Dialogue_4.SetActive(true);
-                isDialogueTriggered_2 = true;
+                dialogue4.SetActive(true);
+                _isDialogueTriggered2 = true;
             }
             
         }
@@ -51,26 +49,22 @@ public class DialogueTrigger : MonoBehaviour
 
    private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.tag == "DialogueTrigger_2")
+        if (collision.CompareTag("DialogueTrigger_2"))
         {
-            Dialogue_4.SetActive(false);
+            dialogue4.SetActive(false);
         }
-   }
-
-    IEnumerator WaitBeforeShow()
-    {
-        Dialogue_1.SetActive(true);
-        yield return new WaitForSeconds(1);
-        Dialogue_1.SetActive(false);
-        Dialogue_2.SetActive(true);
-        yield return new WaitForSeconds(1);
-        Dialogue_1.SetActive(false);
-        Dialogue_2.SetActive(true);
-        yield return new WaitForSeconds(1);
-        Dialogue_2.SetActive(false);
-        Dialogue_3.SetActive(true);
-        yield return new WaitForSeconds(1);
-        Dialogue_3.SetActive(false);
-        
     }
+
+   IEnumerator WaitBeforeShow()
+   {
+       dialogue1.SetActive(true);
+       yield return new WaitForSeconds(1);
+       dialogue1.SetActive(false);
+       dialogue2.SetActive(true);
+       yield return new WaitForSeconds(1);
+       dialogue2.SetActive(false);
+       dialogue3.SetActive(true);
+       yield return new WaitForSeconds(1);
+       dialogue3.SetActive(false);
+   }
 }
