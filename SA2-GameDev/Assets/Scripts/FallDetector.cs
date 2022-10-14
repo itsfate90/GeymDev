@@ -1,14 +1,14 @@
-using System;
+
 using UnityEngine;
 
 public class FallDetector : MonoBehaviour
 {
     public Vector3 respawnPoint;
     public GameObject fallDetector;
-    public GameObject fallDetector2;
+    
 
     [SerializeField] GameObject screenDeath;
-    [SerializeField] GameObject Checkpoint;
+    [SerializeField] GameObject checkpoint;
     void Start()
     {
         respawnPoint = transform.position;
@@ -16,7 +16,6 @@ public class FallDetector : MonoBehaviour
     void Update()
     {
         fallDetector.transform.position = new Vector2(transform.position.x, fallDetector.transform.position.y);
-        fallDetector2.transform.position = new Vector2(transform.position.x, fallDetector2.transform.position.y);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -26,17 +25,12 @@ public class FallDetector : MonoBehaviour
             screenDeath.SetActive(true);
             Time.timeScale = 0f;
         }
-        else if (collision.CompareTag("FallDetector2")) // create new tag for trap and copy paste the folllowing
-        {
-            screenDeath.SetActive(true);
-            Time.timeScale = 0f;
-        }
         else if (collision.CompareTag("Checkpoint"))
         {
             respawnPoint = transform.position;
-            Checkpoint.SetActive(true);
+            checkpoint.SetActive(true);
         }
-          else if (collision.CompareTag("Enemy"))
+        else if (collision.CompareTag("Enemy"))
         {
             screenDeath.SetActive(true);
             Time.timeScale = 0f;
@@ -47,7 +41,7 @@ public class FallDetector : MonoBehaviour
     {
         if (collision.CompareTag("Checkpoint"))
         {
-            Checkpoint.SetActive(false);
+            checkpoint.SetActive(false);
         }
     }
 
