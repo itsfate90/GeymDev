@@ -1853,7 +1853,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.3944764, y: 1}
+    m_SensorSize: {x: 1.7423743, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -7298,6 +7298,7 @@ GameObject:
   - component: {fileID: 583319547}
   - component: {fileID: 583319546}
   - component: {fileID: 583319545}
+  - component: {fileID: 583319548}
   m_Layer: 0
   m_Name: portals - red
   m_TagString: Teleporter
@@ -7411,6 +7412,26 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &583319548
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 583319543}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e6a23e5ff1144b64f9bc9196915f4681, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!4 &585113757 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6912653777728340001, guid: 69d9d9ad5d0396b42a386ef70ec78472, type: 3}
