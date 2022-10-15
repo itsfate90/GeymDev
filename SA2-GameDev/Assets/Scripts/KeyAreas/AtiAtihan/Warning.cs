@@ -20,7 +20,11 @@ public class Warning : MonoBehaviour
          {
             warningDialogue.SetActive(true);
             _isWarningDialogueTriggered = true;
+            warningSign.SetActive(true);
          }
+      }
+      else
+      {
          warningSign.SetActive(true);
       }
    }
@@ -29,6 +33,7 @@ public class Warning : MonoBehaviour
    {
       if (other.CompareTag("Player"))
       {
+         warningDialogue.SetActive(false);
          warningSign.SetActive(false);
       }
    }
