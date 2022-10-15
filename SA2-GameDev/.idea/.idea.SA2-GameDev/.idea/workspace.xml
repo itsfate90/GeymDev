@@ -9,6 +9,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/KeyAreas/AtiAtihan/Dialogue1.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/KeyAreas/AtiAtihan/KaliboCathedral.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/KeyAreas/AtiAtihan/Warning.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/KeyAreas/FloresDeMayo/KeyArea2.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/KeyAreas/Panegbenga/KeyArea3.cs" root0="FORCE_HIGHLIGHTING" />
@@ -106,7 +107,7 @@
       <workItem from="1665490897381" duration="39000" />
       <workItem from="1665537393471" duration="3181000" />
       <workItem from="1665812640996" duration="1453000" />
-      <workItem from="1665841145469" duration="3141000" />
+      <workItem from="1665841145469" duration="4121000" />
     </task>
     <servers />
   </component>
