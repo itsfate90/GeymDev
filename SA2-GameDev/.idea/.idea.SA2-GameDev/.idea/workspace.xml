@@ -8,6 +8,8 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/KeyAreas/FloresDeMayo/KeyArea2.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/KeyAreas/Panegbenga/KeyArea3.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/LoadAfterTime2.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerTeleportation.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/WarningTrigger.cs" root0="FORCE_HIGHLIGHTING" />
@@ -101,6 +103,7 @@
       <workItem from="1665481906477" duration="5166000" />
       <workItem from="1665490897381" duration="39000" />
       <workItem from="1665537393471" duration="3181000" />
+      <workItem from="1665812640996" duration="1453000" />
     </task>
     <servers />
   </component>

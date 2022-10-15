@@ -7,13 +7,13 @@ TagManager:
   - Coin
   - Teleporter
   - FallDetector
-  - FallDetector2
   - Checkpoint
   - Platform
   - DialogueTrigger_1
   - DialogueTrigger_2
   - WarningTrigger
   - Enemy
+  - KeyArea1
   layers:
   - Default
   - TransparentFX
