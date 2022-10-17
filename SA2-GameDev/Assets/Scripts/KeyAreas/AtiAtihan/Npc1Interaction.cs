@@ -12,7 +12,7 @@ public class Npc1Interaction : MonoBehaviour
     public float textSpeed;
     public bool isPlayerClose;
     public bool isAlreadyStarted;
-   
+    public bool isSentenceDone;
 
     private int _index;
 
@@ -44,14 +44,16 @@ public class Npc1Interaction : MonoBehaviour
             StartDialogue();
         }
         
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && isSentenceDone)
         {
+            
             if (textComponent.text == lines[_index])
             {
                 NextLine();
             }
             else
             {
+               
                 StopAllCoroutines();
             }
         }
@@ -67,8 +69,11 @@ public class Npc1Interaction : MonoBehaviour
     {
         foreach (char c in lines[_index].ToCharArray())
         {
+            isSentenceDone = false;
             textComponent.text += c;
             yield return new WaitForSeconds(textSpeed);
+            isSentenceDone = true;
+
         }
     }
 
@@ -83,8 +88,6 @@ public class Npc1Interaction : MonoBehaviour
         else
         {
             dialoguePanel.SetActive(false);
-            
-
         }
     }
 }
