@@ -13,13 +13,16 @@ public class Npc1Interaction : MonoBehaviour
     public bool isPlayerClose;
     public bool isAlreadyStarted;
     public bool isSentenceDone;
+    public bool haveAlreadyTalkedTo;
 
     private int _index;
 
     private void Start()
     {
         textComponent.text= String.Empty;
-        
+        isAlreadyStarted = false;
+        haveAlreadyTalkedTo = false;
+
     }
 
     public void OnTriggerEnter2D(Collider2D col)
@@ -37,10 +40,11 @@ public class Npc1Interaction : MonoBehaviour
 
     private void Update()
     {
-        if (isPlayerClose && Input.GetKeyDown(KeyCode.E) && !isAlreadyStarted)
+        if (isPlayerClose && Input.GetKeyDown(KeyCode.E) && !isAlreadyStarted && !haveAlreadyTalkedTo)
         {
             dialoguePanel.SetActive(true);
             isAlreadyStarted = true;
+            haveAlreadyTalkedTo = true;
             StartDialogue();
         }
         
@@ -53,7 +57,6 @@ public class Npc1Interaction : MonoBehaviour
             }
             else
             {
-               
                 StopAllCoroutines();
             }
         }
