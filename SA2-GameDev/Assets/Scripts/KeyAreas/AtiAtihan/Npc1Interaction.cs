@@ -7,6 +7,7 @@ using TMPro;
 public class Npc1Interaction : MonoBehaviour
 {
     [SerializeField] GameObject dialoguePanel;
+    [SerializeField] GameObject continuePanel;
     public TextMeshProUGUI textComponent;
     public string[] lines;
     public float textSpeed;
@@ -73,9 +74,11 @@ public class Npc1Interaction : MonoBehaviour
         foreach (char c in lines[_index].ToCharArray())
         {
             isSentenceDone = false;
+            continuePanel.SetActive(false);
             textComponent.text += c;
             yield return new WaitForSeconds(textSpeed);
             isSentenceDone = true;
+            continuePanel.SetActive(true);
 
         }
     }
@@ -91,6 +94,7 @@ public class Npc1Interaction : MonoBehaviour
         else
         {
             dialoguePanel.SetActive(false);
+            continuePanel.SetActive(false);
         }
     }
 }
