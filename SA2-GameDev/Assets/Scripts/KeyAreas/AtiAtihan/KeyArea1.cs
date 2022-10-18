@@ -13,6 +13,7 @@ public class KeyArea1 : MonoBehaviour
             {
                 isPlayerAlreadyEntered = true;
                 welcomeSign.SetActive(true);
+                
             }
         }
     }
