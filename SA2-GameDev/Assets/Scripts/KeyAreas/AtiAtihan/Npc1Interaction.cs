@@ -2,13 +2,19 @@ using System;
 using System.Collections;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
+
 
 
 public class Npc1Interaction : MonoBehaviour
 {
     [SerializeField] GameObject dialoguePanel;
     [SerializeField] GameObject continuePanel;
+    [SerializeField] Image speakerImage;
+    [SerializeField] Sprite speakerSprite;
+    //[SerializeField] TextMeshProUGUI npcName;
     public TextMeshProUGUI textComponent;
+    
     public string[] lines;
     public float textSpeed;
     public bool isPlayerClose;
@@ -23,7 +29,6 @@ public class Npc1Interaction : MonoBehaviour
         textComponent.text= String.Empty;
         isAlreadyStarted = false;
         haveAlreadyTalkedTo = false;
-
     }
 
     public void OnTriggerEnter2D(Collider2D col)
@@ -66,6 +71,8 @@ public class Npc1Interaction : MonoBehaviour
 
     void StartDialogue()
     {
+        speakerImage.sprite = speakerSprite;
+        //npcName.text = "Enter Name";
         _index = 0;
         StartCoroutine(TypeLine());
     }
@@ -97,6 +104,7 @@ public class Npc1Interaction : MonoBehaviour
             dialoguePanel.SetActive(false);
             continuePanel.SetActive(false);
             Time.timeScale = 1f;
+            textComponent.text= String.Empty;
         }
     }
 }
