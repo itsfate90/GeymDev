@@ -8,6 +8,7 @@ public class Dialogue1 : MonoBehaviour
   [SerializeField] GameObject dialogue1;
   [SerializeField] GameObject dialogue1B;
   [SerializeField] GameObject dialogue1C;
+  
   public bool isDialogue1AlreadyTriggered;
 
   private void OnTriggerEnter2D(Collider2D col)
@@ -18,6 +19,7 @@ public class Dialogue1 : MonoBehaviour
       {
         isDialogue1AlreadyTriggered = true;
         StartCoroutine(WaitBeforeShow());
+        
       }
     }
   }
@@ -25,13 +27,13 @@ public class Dialogue1 : MonoBehaviour
   IEnumerator WaitBeforeShow()
   {
     dialogue1.SetActive(true);
-    yield return new WaitForSeconds(1);
+    yield return new WaitForSecondsRealtime(1);
     dialogue1.SetActive(false);
     dialogue1B.SetActive(true);
-    yield return new WaitForSeconds(1);
+    yield return new WaitForSecondsRealtime(1);
     dialogue1B.SetActive(false);
     dialogue1C.SetActive(true);
-    yield return new WaitForSeconds(1);
+    yield return new WaitForSecondsRealtime(1);
     dialogue1C.SetActive(false);
   }
 }

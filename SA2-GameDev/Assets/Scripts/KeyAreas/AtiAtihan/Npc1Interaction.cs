@@ -47,6 +47,7 @@ public class Npc1Interaction : MonoBehaviour
             isAlreadyStarted = true;
             haveAlreadyTalkedTo = true;
             StartDialogue();
+            Time.timeScale = 0f;
         }
         
         if (Input.GetMouseButtonDown(0) && isSentenceDone)
@@ -76,7 +77,7 @@ public class Npc1Interaction : MonoBehaviour
             isSentenceDone = false;
             continuePanel.SetActive(false);
             textComponent.text += c;
-            yield return new WaitForSeconds(textSpeed);
+            yield return new WaitForSecondsRealtime(textSpeed);
             isSentenceDone = true;
             continuePanel.SetActive(true);
 
@@ -95,6 +96,7 @@ public class Npc1Interaction : MonoBehaviour
         {
             dialoguePanel.SetActive(false);
             continuePanel.SetActive(false);
+            Time.timeScale = 1f;
         }
     }
 }
