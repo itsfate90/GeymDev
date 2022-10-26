@@ -13,6 +13,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/KeyAreas/AtiAtihan/Warning.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/KeyAreas/FloresDeMayo/KeyArea2.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/KeyAreas/Panegbenga/KeyArea3.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/KeyAreas/Panegbenga/LadyOfAttonement.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/LoadAfterTime2.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerTeleportation.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/WarningTrigger.cs" root0="FORCE_HIGHLIGHTING" />
@@ -112,6 +113,7 @@
       <workItem from="1666004857029" duration="1565000" />
       <workItem from="1666101696261" duration="935000" />
       <workItem from="1666322941821" duration="4174000" />
+      <workItem from="1666789963822" duration="688000" />
     </task>
     <servers />
   </component>
