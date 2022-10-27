@@ -16,9 +16,9 @@ public class CoinCollectible : MonoBehaviour
             collectionSoundEffect.Play();
             Destroy(collision.gameObject);
             coins++;
-            
-                Instantiate(portal,new Vector3(1023,22,0),Quaternion.identity);
-           
+                if(coins==1){
+                Instantiate(portal,new Vector3(1048,-2,0),Quaternion.identity);
+                }
             coinText.text="Coins:" + coins;
            
         }
