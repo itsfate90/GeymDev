@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1989516478665294664}
   - component: {fileID: 1989516478665294667}
   - component: {fileID: 1989516478665294670}
+  - component: {fileID: -1480047164768134290}
   m_Layer: 0
   m_Name: portals - red1
   m_TagString: Teleporter
@@ -146,3 +147,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &-1480047164768134290
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1989516478665294661}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4c7b28f66da10146bee5aa8094315c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  iLevelToLoad: 4
+  sLevelToLoad: 
+  useIntegerToLoadLevel: 1
