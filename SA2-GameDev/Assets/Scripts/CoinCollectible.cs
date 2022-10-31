@@ -6,6 +6,7 @@ public class CoinCollectible : MonoBehaviour
     private int _coins;
     private int _paper;
     [SerializeField] private Text coinText;
+    [SerializeField] private Text paperText;
     [SerializeField] private AudioSource collectionSoundEffect;
      [SerializeField] private GameObject portal;
     private void OnTriggerEnter2D(Collider2D collision) {
@@ -26,6 +27,7 @@ public class CoinCollectible : MonoBehaviour
             Instantiate(portal,new Vector3(1048,-2,0),Quaternion.identity);
         }
         coinText.text="Coins:" + _coins;
+        paperText.text="Paper"+_paper;
 
     }
 }
