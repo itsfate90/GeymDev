@@ -14,6 +14,7 @@ TagManager:
   - WarningTrigger
   - Enemy
   - KeyArea1
+  - Pages
   layers:
   - Default
   - TransparentFX
