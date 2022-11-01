@@ -15,6 +15,9 @@ TagManager:
   - Enemy
   - KeyArea1
   - Pages
+  - TornPaper
+  - TornPaper2
+  - TornPaper3
   layers:
   - Default
   - TransparentFX
