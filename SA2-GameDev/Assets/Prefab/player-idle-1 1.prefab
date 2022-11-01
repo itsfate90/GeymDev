@@ -44,7 +44,6 @@ GameObject:
   - component: {fileID: 3685239494902257931}
   - component: {fileID: 3685239494902257928}
   - component: {fileID: 3685239494902257943}
-  - component: {fileID: 3685239494902257939}
   - component: {fileID: 3685239494902257941}
   - component: {fileID: 3685239494902257938}
   - component: {fileID: 3685239494902257937}
@@ -52,6 +51,7 @@ GameObject:
   - component: {fileID: 3685239494902257951}
   - component: {fileID: 3685239494902257948}
   - component: {fileID: 3685239494902257947}
+  - component: {fileID: 1310345085}
   m_Layer: 0
   m_Name: player-idle-1 1
   m_TagString: Player
@@ -182,7 +182,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0018513631, y: -0.02}
+  m_Offset: {x: 0.0026289895, y: 0.003457807}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -193,24 +193,8 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.11826193, y: 0.12}
+  m_Size: {x: 0.113304436, y: 0.30689573}
   m_EdgeRadius: 0
---- !u!58 &3685239494902257939
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3685239494902257932}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.0024584676, y: -0.07899426}
-  serializedVersion: 2
-  m_Radius: 0.057446778
 --- !u!114 &3685239494902257941
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -280,7 +264,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinText: {fileID: 0}
+  paperText: {fileID: 0}
   collectionSoundEffect: {fileID: 3685239494902257947}
+  portal: {fileID: 1989516478665294661, guid: b94cd7f70944a164287dbf09e12b5221, type: 3}
 --- !u!114 &3685239494902257936
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -501,6 +487,23 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1310345085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3685239494902257932}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d41c9ca7da15ce248bfb7de9b93f5a2c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  atiPanel: {fileID: 0}
+  florPanel: {fileID: 0}
+  panPanel: {fileID: 0}
+  empPanel: {fileID: 0}
+  pauseMenu: {fileID: 0}
 --- !u!1 &3685239495354442148
 GameObject:
   m_ObjectHideFlags: 0
