@@ -1,5 +1,5 @@
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class OpenInventory : MonoBehaviour
 {
    private bool _isPage1;
@@ -19,14 +19,26 @@ public class OpenInventory : MonoBehaviour
 
    private void Start()
    {
-      _isPage1 = false;
-      _isPage2 = false;
-      _isPage3 = false;
-      
       atiPanel.SetActive(false);
       florPanel.SetActive(false);
       panPanel.SetActive(false);
       empPanel.SetActive(false);
+
+      Scene currentScene = SceneManager.GetActiveScene();
+      string sceneName = currentScene.name;
+
+      if (sceneName == "SampleScene")
+      {
+         _isPage1 = false;
+         _isPage2 = false;
+         _isPage3 = false;
+      }
+      else if (sceneName == "Area2")
+      {
+         _isPage1 = true;
+         _isPage2 = true;
+         _isPage3 = true;
+      }
    }
 
    private void OnTriggerEnter2D(Collider2D col)
