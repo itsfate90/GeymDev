@@ -48,7 +48,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 79
+  controlID: 18
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -472,7 +472,7 @@ MonoBehaviour:
     m_LastAppliedPresetName: Default
     m_SaveData: []
   m_SearchFilter:
-    m_NameFilter: area 2
+    m_NameFilter: 
     m_ClassNames: []
     m_AssetLabels: []
     m_AssetBundleNames: []
@@ -484,22 +484,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Imported Ass/Animated Waterfall
+    - Assets/Prefab
     m_Globs: []
-    m_OriginalText: area 2
+    m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Imported Ass/Animated Waterfall
+  - Assets/Prefab
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Aaron\Documents\GitHub\GeymDev\SA2-GameDev
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 722}
-    m_SelectedIDs: ce770000
-    m_LastClickedID: 30670
-    m_ExpandedIDs: 00000000087700000a7700000c7700000e77000010770000127700001477000016770000187700001a7700001c7700001e77000020770000227700002477000026770000287700002a7700002c7700002e7700003077000032770000347700003677000038770000b077000000ca9a3b
+    scrollPos: {x: 0, y: 1082}
+    m_SelectedIDs: ca780000
+    m_LastClickedID: 30922
+    m_ExpandedIDs: 000000001a7800001c7800001e780000207800002278000024780000267800002a7800002e78000030780000327800003478000036780000387800003a7800003c7800003e78000040780000427800004478000046780000487800004a780000c478000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -527,7 +527,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000087700000a7700000c7700000e77000010770000127700001477000016770000187700001a7700001c7700001e77000020770000227700002477000026770000287700002a7700002c7700002e7700003077000032770000347700003677000038770000
+    m_ExpandedIDs: 000000001a7800001c7800001e78000020780000227800002478000026780000287800002a7800002c7800002e78000030780000327800003478000036780000387800003a7800003c7800003e78000040780000427800004478000046780000487800004a780000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -554,7 +554,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000d2b300000cb4000006b4000050670000bc9d000056670000708300007e830000ca6a0000fa6a0000ce6a00004aa2000016840000f49a00006268000074730000f6dc00005a9e000034a0000032ac000070ac000024820000b6730000b67c00002c84000090ad0000ac7a0000d4650000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -654,24 +654,24 @@ MonoBehaviour:
     m_SaveData: []
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 782}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: 26ddffffb6e7ffff1cf5ffff82f5ffffc4f6ffff24f8ffff5af8ffffd2f8fffff6f9ffff64faffffbcfaffff00fbffff10fbffff1a5e00003a5f00007e600000b6630000e06300001a640000ac640000f6660000
+      scrollPos: {x: 0, y: 206}
+      m_SelectedIDs: aaeaffff
+      m_LastClickedID: -5462
+      m_ExpandedIDs: 3cefffff10fbffff70650000d4670000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: Checkpoint_2 (3)
-        m_OriginalName: Checkpoint_2 (3)
+        m_Name: 
+        m_OriginalName: 
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 24146
+        m_UserData: 0
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 0
+        m_OriginalEventType: 11
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 4}
       m_SearchString: 
@@ -928,9 +928,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -807.9641, y: -1.7813234, z: -3.6568}
+    m_Target: {x: 150.03915, y: 13.605689, z: -2.6449835}
     speed: 2
-    m_Value: {x: -807.9641, y: -1.7813234, z: -3.6568}
+    m_Value: {x: 148.99586, y: 14.359566, z: -2.6583574}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -981,9 +981,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 24.763178
+    m_Target: 28.381996
     speed: 2
-    m_Value: 24.763178
+    m_Value: 29.719368
   m_Ortho:
     m_Target: 1
     speed: 2
