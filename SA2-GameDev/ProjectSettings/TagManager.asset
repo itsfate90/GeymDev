@@ -18,6 +18,9 @@ TagManager:
   - TornPaper
   - TornPaper2
   - TornPaper3
+  - TornPaper4
+  - TornPaper5
+  - TornPaper6
   layers:
   - Default
   - TransparentFX

@@ -6,15 +6,28 @@ public class OpenInventory : MonoBehaviour
    private bool _isPage2;
    private bool _isPage3;
 
+   private bool _isPage4;
+   private bool _isPage5;
+   private bool _isPage6;
+
    private bool _isPage1Open;
    private bool _isPage2Open;
-   //private bool _isPage3Open;
+   private bool _isPage3Open;
+
+   private bool _isPage4Open;
+   private bool _isPage5Open;
+   //private bool _isPage6Open;
 
    [SerializeField] private GameObject atiPanel;
    [SerializeField] private GameObject florPanel;
    [SerializeField] private GameObject panPanel;
    [SerializeField] private GameObject empPanel;
    [SerializeField] private GameObject pauseMenu;
+   [SerializeField] private GameObject sipaPanel;
+   [SerializeField] private GameObject patinteroPanel;
+   [SerializeField] private GameObject pikoPanel;
+   
+   
    
 
    private void Start()
@@ -22,7 +35,11 @@ public class OpenInventory : MonoBehaviour
       atiPanel.SetActive(false);
       florPanel.SetActive(false);
       panPanel.SetActive(false);
+      sipaPanel.SetActive(false);
+      patinteroPanel.SetActive(false);
+      pikoPanel.SetActive(false);
       empPanel.SetActive(false);
+      
 
       Scene currentScene = SceneManager.GetActiveScene();
       string sceneName = currentScene.name;
@@ -57,10 +74,26 @@ public class OpenInventory : MonoBehaviour
       {
          _isPage3 = true;
       }
+
+      if (col.CompareTag("TornPaper4"))
+      {
+         _isPage4 = true;
+      }
+
+      if (col.CompareTag("TornPaper5"))
+      {
+         _isPage5 = true;
+      }
+
+      if (col.CompareTag("TornPaper6"))
+      {
+         _isPage6 = true;
+      }
    }
 
    public  void OpenBook()
    {
+      Time.timeScale = 0f;
       pauseMenu.SetActive(false);
       if (_isPage1)
       {
@@ -104,14 +137,63 @@ public class OpenInventory : MonoBehaviour
          {
             empPanel.SetActive(false);
             panPanel.SetActive(true);
-            //_isPage3Open = true;
+            _isPage3Open = true;
          }
          else if (!_isPage3)
          {
             empPanel.SetActive(true);
-            //_isPage3Open = true;
+            _isPage3Open = true;
          }
       }
+      else if (_isPage3Open)
+      {
+         panPanel.SetActive(false);
+         _isPage3Open = false;
+         if (_isPage4)
+         {
+            empPanel.SetActive(false);
+            sipaPanel.SetActive(true);
+            _isPage4Open = true;
+         }
+         else if (!_isPage4)
+         {
+            empPanel.SetActive(true);
+            _isPage4Open = true;
+         }
+      }
+      else if (_isPage4Open)
+      {
+         sipaPanel.SetActive(false);
+         _isPage4Open = false;
+         if (_isPage5)
+         {
+            empPanel.SetActive(false);
+            patinteroPanel.SetActive(true);
+            _isPage5Open = true;
+         }
+         else if (!_isPage5)
+         {
+            empPanel.SetActive(true);
+            _isPage5Open = true;
+         }
+      }
+      else if (_isPage5Open)
+      {
+         patinteroPanel.SetActive(false);
+         _isPage5Open = false;
+         if (_isPage6)
+         {
+            empPanel.SetActive(false);
+            pikoPanel.SetActive(true);
+            //_isPage6Open = true;
+         }
+         else if (!_isPage6)
+         {
+            empPanel.SetActive(true);
+            //_isPage6Open = true;
+         }
+      }
+      
    }
 
    public void CloseMenu()
@@ -120,6 +202,10 @@ public class OpenInventory : MonoBehaviour
       florPanel.SetActive(false);
       panPanel.SetActive(false);
       empPanel.SetActive(false);
+      sipaPanel.SetActive(false);
+      patinteroPanel.SetActive(false);
+      pikoPanel.SetActive(false);
       pauseMenu.SetActive(true);
+      
    }
 }

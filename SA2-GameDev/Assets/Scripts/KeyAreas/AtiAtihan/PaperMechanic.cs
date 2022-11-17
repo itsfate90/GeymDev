@@ -65,6 +65,7 @@ public class PaperMechanic : MonoBehaviour
             else
             {
                 StopAllCoroutines();
+                continuePanel.SetActive(false);
             }
         }
     }
