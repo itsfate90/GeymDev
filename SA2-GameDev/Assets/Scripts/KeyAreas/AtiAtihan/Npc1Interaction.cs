@@ -12,6 +12,8 @@ public class Npc1Interaction : MonoBehaviour
     [SerializeField] GameObject continuePanel;
     [SerializeField] Image speakerImage;
     [SerializeField] Sprite speakerSprite;
+
+    [SerializeField] GameObject indicatorPanel;
     //[SerializeField] TextMeshProUGUI npcName;
     public TextMeshProUGUI textComponent;
     
@@ -29,11 +31,25 @@ public class Npc1Interaction : MonoBehaviour
         textComponent.text= String.Empty;
         isAlreadyStarted = false;
         haveAlreadyTalkedTo = false;
+        indicatorPanel.SetActive(false);
     }
 
     public void OnTriggerEnter2D(Collider2D col)
     {
-        isPlayerClose = col.CompareTag("Player");
+        if (col.CompareTag("Player"))
+        {
+            isPlayerClose = true;
+            if (!haveAlreadyTalkedTo)
+            {
+                indicatorPanel.SetActive(true);
+            }
+            else
+            {
+                indicatorPanel.SetActive(false);
+            }
+            
+        }
+        
     }
 
     public void OnTriggerExit2D(Collider2D other)
@@ -41,6 +57,7 @@ public class Npc1Interaction : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             isPlayerClose = false;
+            indicatorPanel.SetActive(false);
         }
     }
 
@@ -48,6 +65,7 @@ public class Npc1Interaction : MonoBehaviour
     {
         if (isPlayerClose && Input.GetKeyDown(KeyCode.E) && !isAlreadyStarted && !haveAlreadyTalkedTo)
         {
+            indicatorPanel.SetActive(false);
             dialoguePanel.SetActive(true);
             isAlreadyStarted = true;
             haveAlreadyTalkedTo = true;
