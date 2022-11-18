@@ -11,6 +11,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/KeyAreas/AtiAtihan/Dialogue1.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/KeyAreas/AtiAtihan/KaliboCathedral.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/KeyAreas/AtiAtihan/Warning.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/KeyAreas/LandMarks.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/KeyAreas/Panegbenga/LadyOfAttonement.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/LoadAfterTime2.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerTeleportation.cs" root0="FORCE_HIGHLIGHTING" />
@@ -117,7 +118,7 @@
       <workItem from="1667375499013" duration="308000" />
       <workItem from="1668668187504" duration="3926000" />
       <workItem from="1668688328638" duration="583000" />
-      <workItem from="1668746607389" duration="2575000" />
+      <workItem from="1668746607389" duration="3056000" />
     </task>
     <servers />
   </component>
