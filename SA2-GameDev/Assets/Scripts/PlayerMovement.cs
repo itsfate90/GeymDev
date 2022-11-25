@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -9,14 +8,11 @@ public class PlayerMovement : MonoBehaviour
     float horizontalMove = 0f;
     public float runSpeed = 150;
     bool jump = false;
+    //private bool _isGround;
     [SerializeField] private AudioSource jumpSoundEffect;
-    // Start is called before the first frame update
-    void Start()
-    {
-      
-    }
 
-    // Update is called once per frame
+  
+
     void Update()
     {
         horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
@@ -27,7 +23,10 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetButtonDown("Jump"))
         {   
             jump = true;
-            jumpSoundEffect.Play();
+           
+            
+                jumpSoundEffect.Play();
+            
             animator.SetBool("IsJumping", true);
            
         }

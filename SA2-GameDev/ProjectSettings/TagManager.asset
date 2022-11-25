@@ -21,6 +21,7 @@ TagManager:
   - TornPaper4
   - TornPaper5
   - TornPaper6
+  - Ground
   layers:
   - Default
   - TransparentFX
