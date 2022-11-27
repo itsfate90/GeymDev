@@ -7,6 +7,7 @@ public class PlayerMovement : MonoBehaviour
     public Animator animator;
     float horizontalMove = 0f;
     public float runSpeed = 150;
+     public ParticleSystem dust;
     bool jump = false;
     //private bool _isGround;
     [SerializeField] private AudioSource jumpSoundEffect;
@@ -16,14 +17,15 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
-
+        
+     
         animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
       
 
         if (Input.GetButtonDown("Jump"))
         {   
             jump = true;
-           
+            
             
                 jumpSoundEffect.Play();
             
@@ -36,6 +38,8 @@ public class PlayerMovement : MonoBehaviour
     public void Onlanding()
     {
         animator.SetBool("IsJumping", false);
+             CreateDust();
+        
        
     }
    
@@ -44,6 +48,12 @@ public class PlayerMovement : MonoBehaviour
     void FixedUpdate()
     {
         controller.Move(horizontalMove * Time.fixedDeltaTime, false, jump);
+        
+       
         jump = false;
     }
+     void CreateDust(){
+        dust.Play();
+    }
+   
 }
