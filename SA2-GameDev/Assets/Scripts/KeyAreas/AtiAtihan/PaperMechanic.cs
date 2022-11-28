@@ -53,6 +53,7 @@ public class PaperMechanic : MonoBehaviour
             alreadyCollected = true;
             StartDialogue();
             Time.timeScale = 0f;
+            
         }
         
         if (Input.GetMouseButtonDown(0) && isDone)
