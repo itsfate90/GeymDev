@@ -3,27 +3,33 @@ using System.Collections;
 using UnityEngine;
 using TMPro;
 
+
 public class KeyArea : MonoBehaviour
 {
    [SerializeField] private GameObject welcomePanel;
+   [SerializeField] private GameObject interactPanel;
    public TextMeshProUGUI textComponent;
    private int _index;
    public string[] lines;
    public float textSpeed;
+   private bool _isPlayerNear;
+   private bool _isAlreadyStarted;
    
 
    private void Start()
    {
       welcomePanel.SetActive(false);
+      interactPanel.SetActive(false);
+      _isAlreadyStarted = false;
+      textComponent.text = String.Empty;
    }
 
    public void OnTriggerEnter2D(Collider2D col)
    {
       if (col.CompareTag("Player"))
       {
-         textComponent.text = String.Empty;
-         StartWelcome();
-         welcomePanel.SetActive(true);
+         _isPlayerNear = true;
+         interactPanel.SetActive(true);
       }
    }
 
@@ -31,8 +37,30 @@ public class KeyArea : MonoBehaviour
    {
       if (other.CompareTag("Player"))
       {
+         
+         interactPanel.SetActive(false);
+         _isPlayerNear = false;
          StopAllCoroutines();
+         textComponent.text = String.Empty;
+      }
+   }
+
+   private void Update()
+   {
+      if(_isPlayerNear)
+      {
+         if (Input.GetKeyDown(KeyCode.E) && !_isAlreadyStarted)
+         {
+            _isAlreadyStarted = true;
+            interactPanel.SetActive(false);
+            welcomePanel.SetActive(true);
+            StartWelcome();
+         }
+      }
+      else
+      {
          welcomePanel.SetActive(false);
+         _isAlreadyStarted = false;
       }
    }
 
@@ -48,6 +76,8 @@ public class KeyArea : MonoBehaviour
       {
          textComponent.text += c;
          yield return new WaitForSecondsRealtime(textSpeed);
+         
+         
       }
    }
 }
