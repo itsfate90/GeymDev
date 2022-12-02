@@ -56,6 +56,15 @@ public class OpenInventory : MonoBehaviour
          _isPage2 = true;
          _isPage3 = true;
       }
+      else if (sceneName == "Area3")
+      {
+         _isPage1 = true;
+         _isPage2 = true;
+         _isPage3 = true;
+         _isPage4 = true;
+         _isPage5 = true;
+         _isPage6 = true;
+      }
    }
 
    private void OnTriggerEnter2D(Collider2D col)
