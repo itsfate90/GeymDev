@@ -22,7 +22,7 @@ public class Npc1Interaction : MonoBehaviour
     public bool isPlayerClose;
     public bool isAlreadyStarted;
     public bool isSentenceDone;
-    public bool haveAlreadyTalkedTo;
+    
 
     private int _index;
 
@@ -30,7 +30,6 @@ public class Npc1Interaction : MonoBehaviour
     {
         textComponent.text= String.Empty;
         isAlreadyStarted = false;
-        haveAlreadyTalkedTo = false;
         indicatorPanel.SetActive(false);
     }
 
@@ -39,7 +38,7 @@ public class Npc1Interaction : MonoBehaviour
         if (col.CompareTag("Player"))
         {
             isPlayerClose = true;
-            if (!haveAlreadyTalkedTo)
+            if (isPlayerClose)
             {
                 indicatorPanel.SetActive(true);
             }
@@ -63,12 +62,11 @@ public class Npc1Interaction : MonoBehaviour
 
     private void Update()
     {
-        if (isPlayerClose && Input.GetKeyDown(KeyCode.E) && !isAlreadyStarted && !haveAlreadyTalkedTo)
+        if (isPlayerClose && Input.GetKeyDown(KeyCode.E) && !isAlreadyStarted)
         {
             indicatorPanel.SetActive(false);
             dialoguePanel.SetActive(true);
             isAlreadyStarted = true;
-            haveAlreadyTalkedTo = true;
             StartDialogue();
             Time.timeScale = 0f;
         }
@@ -123,6 +121,7 @@ public class Npc1Interaction : MonoBehaviour
             continuePanel.SetActive(false);
             Time.timeScale = 1f;
             textComponent.text= String.Empty;
+            isAlreadyStarted = false;
         }
     }
 }
