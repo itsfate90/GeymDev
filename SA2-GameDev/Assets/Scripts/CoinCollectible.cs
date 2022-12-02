@@ -27,7 +27,7 @@ public class CoinCollectible : MonoBehaviour
             Instantiate(portal,new Vector3(1048,-2,0),Quaternion.identity);
         }
         coinText.text="Coins:" + _coins;
-        paperText.text="Paper"+_paper;
+        paperText.text="Paper:"+_paper;
 
     }
 }

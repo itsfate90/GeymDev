@@ -27,7 +27,7 @@ public class Area2_ConCollecting : MonoBehaviour
             Instantiate(portal,new Vector3(-1200,-1,0),Quaternion.identity);
         }
         coinText.text="Coins:" + _coins;
-        paperText.text="Paper"+_paper;
+        paperText.text="Paper:"+_paper;
 
     }
 }
