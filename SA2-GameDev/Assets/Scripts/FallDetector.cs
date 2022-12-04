@@ -21,7 +21,12 @@ public class FallDetector : MonoBehaviour
     {
         fallDetector.transform.position = new Vector2(transform.position.x, fallDetector.transform.position.y);
 
-        if (Input.GetKeyDown(KeyCode.Space) || (Input.GetMouseButtonDown(0) && _isRespawnScreenActive))
+        if (Input.GetKeyDown(KeyCode.Space) && _isRespawnScreenActive)
+        {
+            RespawnButton();
+        }
+
+        if (Input.GetMouseButtonDown(0) && _isRespawnScreenActive)
         {
             RespawnButton();
         }
