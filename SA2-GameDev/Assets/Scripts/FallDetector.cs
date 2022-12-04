@@ -6,9 +6,11 @@ public class FallDetector : MonoBehaviour
     public Vector3 respawnPoint;
     public GameObject fallDetector;
     
-
+ 
     [SerializeField] GameObject screenDeath;
     [SerializeField] GameObject checkpoint;
+   
+
     void Start()
     {
         respawnPoint = transform.position;
@@ -26,9 +28,10 @@ public class FallDetector : MonoBehaviour
             Time.timeScale = 0f;
         }
         else if (collision.CompareTag("Checkpoint"))
-        {
+        {   
             respawnPoint = transform.position;
             checkpoint.SetActive(true);
+             
         }
         else if (collision.CompareTag("Enemy"))
         {
@@ -41,7 +44,10 @@ public class FallDetector : MonoBehaviour
     {
         if (collision.CompareTag("Checkpoint"))
         {
+          
             checkpoint.SetActive(false);
+             
+           
         }
     }
 
