@@ -9,15 +9,22 @@ public class FallDetector : MonoBehaviour
  
     [SerializeField] GameObject screenDeath;
     [SerializeField] GameObject checkpoint;
+    private bool _isRespawnScreenActive;
    
 
     void Start()
     {
         respawnPoint = transform.position;
+        _isRespawnScreenActive = false;
     }
     void Update()
     {
         fallDetector.transform.position = new Vector2(transform.position.x, fallDetector.transform.position.y);
+
+        if (Input.GetKeyDown(KeyCode.Space) || (Input.GetMouseButtonDown(0) && _isRespawnScreenActive))
+        {
+            RespawnButton();
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -25,6 +32,7 @@ public class FallDetector : MonoBehaviour
         if (collision.CompareTag("FallDetector"))
         {
             screenDeath.SetActive(true);
+            _isRespawnScreenActive = true;
             Time.timeScale = 0f;
         }
         else if (collision.CompareTag("Checkpoint"))
@@ -36,6 +44,7 @@ public class FallDetector : MonoBehaviour
         else if (collision.CompareTag("Enemy"))
         {
             screenDeath.SetActive(true);
+            _isRespawnScreenActive = true;
             Time.timeScale = 0f;
         }
     }
@@ -44,16 +53,15 @@ public class FallDetector : MonoBehaviour
     {
         if (collision.CompareTag("Checkpoint"))
         {
-          
             checkpoint.SetActive(false);
-             
-           
         }
     }
+    
 
     public void RespawnButton()
     {
         screenDeath.SetActive(false);
+        _isRespawnScreenActive = false;
         Time.timeScale = 1f;
         transform.position = respawnPoint;
     }
