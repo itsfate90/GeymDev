@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 public class OpenInventory : MonoBehaviour
@@ -17,6 +18,7 @@ public class OpenInventory : MonoBehaviour
    private bool _isPage4Open;
    private bool _isPage5Open;
    //private bool _isPage6Open;
+   private bool _isOpenInventoryOpen;
 
    [SerializeField] private GameObject atiPanel;
    [SerializeField] private GameObject florPanel;
@@ -39,7 +41,7 @@ public class OpenInventory : MonoBehaviour
       patinteroPanel.SetActive(false);
       pikoPanel.SetActive(false);
       empPanel.SetActive(false);
-      
+      _isOpenInventoryOpen = false;
 
       Scene currentScene = SceneManager.GetActiveScene();
       string sceneName = currentScene.name;
@@ -104,6 +106,7 @@ public class OpenInventory : MonoBehaviour
    {
       Time.timeScale = 0f;
       pauseMenu.SetActive(false);
+      _isOpenInventoryOpen = true;
       if (_isPage1)
       {
          atiPanel.SetActive(true);
@@ -118,6 +121,7 @@ public class OpenInventory : MonoBehaviour
 
    public void NextPage1()
    {
+      _isOpenInventoryOpen = true;
       
       atiPanel.SetActive(false);
       if (_isPage1Open)
@@ -205,6 +209,14 @@ public class OpenInventory : MonoBehaviour
       
    }
 
+   private void Update()
+   {
+      if (Input.GetKeyDown(KeyCode.Escape) && _isOpenInventoryOpen)
+      {
+         CloseMenu();
+      }
+   }
+
    public void CloseMenu()
    {
       atiPanel.SetActive(false);
@@ -214,6 +226,7 @@ public class OpenInventory : MonoBehaviour
       sipaPanel.SetActive(false);
       patinteroPanel.SetActive(false);
       pikoPanel.SetActive(false);
+      _isOpenInventoryOpen = false;
       pauseMenu.SetActive(true);
       
    }
