@@ -23,7 +23,7 @@ public class CoinCollectible : MonoBehaviour
             Destroy(collision.gameObject);
             _paper++;
         }
-        if(_coins >= 20 && _paper == 3){
+        if(_coins >= 35 && _paper == 3){
             Instantiate(portal,new Vector3(1048,-2,0),Quaternion.identity);
         }
         coinText.text="Coins:" + _coins;
