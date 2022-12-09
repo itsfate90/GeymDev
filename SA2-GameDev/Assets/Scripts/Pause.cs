@@ -3,20 +3,26 @@ using UnityEngine.SceneManagement;
 
 public class Pause : MonoBehaviour
 {
-    public static bool isPaused = false;
+    private bool _isPaused;
+    private bool _isCheatPanelOpen;
     [SerializeField]  GameObject pauseMenu;
+    [SerializeField] GameObject cheatMenu;
 
 
     private void Start()
     {
         Time.timeScale = 1f;
+        _isPaused = false;
+        _isCheatPanelOpen = false;
+        cheatMenu.SetActive(false);
+        pauseMenu.SetActive(false);
     }
 
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if (isPaused)
+            if (_isPaused)
             {
                 ResumeGame();
             }
@@ -24,7 +30,14 @@ public class Pause : MonoBehaviour
             {
                 PauseGame();
             }
-            
+
+            if (_isCheatPanelOpen)
+            {
+                cheatMenu.SetActive(false);
+                _isCheatPanelOpen = false;
+                pauseMenu.SetActive(true);
+                Time.timeScale = 0f;
+            }
         }
         
     }
@@ -33,7 +46,7 @@ public class Pause : MonoBehaviour
     {
         pauseMenu.SetActive(false);
         Time.timeScale = 1f;
-        isPaused = false;
+        _isPaused = false;
 
     }
 
@@ -41,7 +54,7 @@ public class Pause : MonoBehaviour
     {
        pauseMenu.SetActive(true);
        Time.timeScale = 0f;
-       isPaused = true;
+       _isPaused = true;
 
     }
 
@@ -56,5 +69,27 @@ public class Pause : MonoBehaviour
         Application.Quit();
         Debug.Log("Quit");
         
+    }
+
+    public void Cheat()
+    {
+        cheatMenu.SetActive(true);
+        _isCheatPanelOpen = true;
+    }
+
+    public void Level1()
+    {
+        SceneManager.LoadScene("SampleScene");
+        pauseMenu.SetActive(false);
+    }
+    public void Level2()
+    {
+        SceneManager.LoadScene("Area2");
+        pauseMenu.SetActive(false);
+    }
+    public void Level3()
+    {
+        SceneManager.LoadScene("Area3");
+        pauseMenu.SetActive(false);
     }
 }
