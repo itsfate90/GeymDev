@@ -42,6 +42,7 @@ public class KeyArea : MonoBehaviour
          _isPlayerNear = false;
          StopAllCoroutines();
          textComponent.text = String.Empty;
+         _isAlreadyStarted = false;
       }
    }
 
@@ -57,11 +58,6 @@ public class KeyArea : MonoBehaviour
             StartWelcome();
          }
       }
-      else
-      {
-         welcomePanel.SetActive(false);
-         _isAlreadyStarted = false;
-      }
    }
 
    private void StartWelcome()
@@ -76,8 +72,6 @@ public class KeyArea : MonoBehaviour
       {
          textComponent.text += c;
          yield return new WaitForSecondsRealtime(textSpeed);
-         
-         
       }
    }
 }
