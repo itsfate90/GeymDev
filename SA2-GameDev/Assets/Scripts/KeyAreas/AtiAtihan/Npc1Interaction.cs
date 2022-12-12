@@ -86,6 +86,7 @@ public class Npc1Interaction : MonoBehaviour
             else
             {
                 StopAllCoroutines();
+                
             }
         }
     }
@@ -127,6 +128,7 @@ public class Npc1Interaction : MonoBehaviour
             Time.timeScale = 1f;
             textComponent.text= String.Empty;
             isAlreadyStarted = false;
+            indicatorPanel.SetActive(true);
         }
     }
 }
