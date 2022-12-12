@@ -12,6 +12,11 @@ public class Npc1Interaction : MonoBehaviour
     [SerializeField] GameObject continuePanel;
     [SerializeField] Image speakerImage;
     [SerializeField] Sprite speakerSprite;
+    
+    [SerializeField] Image playerImage;
+    [SerializeField] Sprite playerSprite;
+    
+    
 
     [SerializeField] GameObject indicatorPanel;
     //[SerializeField] TextMeshProUGUI npcName;
@@ -88,7 +93,7 @@ public class Npc1Interaction : MonoBehaviour
     void StartDialogue()
     {
         speakerImage.sprite = speakerSprite;
-        //npcName.text = "Enter Name";
+        playerImage.sprite = playerSprite;
         _index = 0;
         StartCoroutine(TypeLine());
     }
