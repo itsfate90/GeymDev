@@ -47,6 +47,7 @@ public class Pause : MonoBehaviour
             {
                 helpMenu.SetActive(false);
                 _isHelpMenuOpen = false;
+                Time.timeScale = 0f;
                 pauseMenu.SetActive(true);
                 
             }
