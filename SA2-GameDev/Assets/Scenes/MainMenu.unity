@@ -620,7 +620,7 @@ GameObject:
   - component: {fileID: 611143218}
   - component: {fileID: 611143217}
   m_Layer: 5
-  m_Name: start-text
+  m_Name: Control-text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -5,8 +5,10 @@ public class Pause : MonoBehaviour
 {
     private bool _isPaused;
     private bool _isCheatPanelOpen;
+    private bool _isHelpMenuOpen;
     [SerializeField]  GameObject pauseMenu;
     [SerializeField] GameObject cheatMenu;
+    [SerializeField] private GameObject helpMenu;
 
 
     private void Start()
@@ -14,8 +16,10 @@ public class Pause : MonoBehaviour
         Time.timeScale = 1f;
         _isPaused = false;
         _isCheatPanelOpen = false;
+        _isHelpMenuOpen = true;
         cheatMenu.SetActive(false);
         pauseMenu.SetActive(false);
+        helpMenu.SetActive(false);
     }
 
     void Update()
@@ -36,7 +40,15 @@ public class Pause : MonoBehaviour
                 cheatMenu.SetActive(false);
                 _isCheatPanelOpen = false;
                 pauseMenu.SetActive(true);
-                Time.timeScale = 0f;
+               
+            }
+
+            if (_isHelpMenuOpen)
+            {
+                helpMenu.SetActive(false);
+                _isHelpMenuOpen = false;
+                pauseMenu.SetActive(true);
+                
             }
         }
         
@@ -73,6 +85,7 @@ public class Pause : MonoBehaviour
 
     public void Cheat()
     {
+        
         cheatMenu.SetActive(true);
         _isCheatPanelOpen = true;
     }
@@ -91,5 +104,20 @@ public class Pause : MonoBehaviour
     {
         SceneManager.LoadScene("Area3");
         pauseMenu.SetActive(false);
+    }
+
+    public void HelpButton()
+    {
+        helpMenu.SetActive(true);
+        _isHelpMenuOpen = true;
+        pauseMenu.SetActive(false);
+    }
+
+    public void ReturnButton()
+    {
+        helpMenu.SetActive(false);
+        _isHelpMenuOpen = false;
+        pauseMenu.SetActive(true);
+        
     }
 }
