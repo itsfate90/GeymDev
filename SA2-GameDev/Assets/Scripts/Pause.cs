@@ -39,6 +39,7 @@ public class Pause : MonoBehaviour
             {
                 cheatMenu.SetActive(false);
                 _isCheatPanelOpen = false;
+                Time.timeScale = 0f;
                 pauseMenu.SetActive(true);
                
             }
