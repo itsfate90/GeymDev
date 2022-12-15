@@ -138,7 +138,6 @@ public class OpenInventory : MonoBehaviour
          {
             empPanel.SetActive(true);
             _isPage2Open = true;
-            
          }
          
       }
@@ -213,11 +212,21 @@ public class OpenInventory : MonoBehaviour
    {
       if (Input.GetKeyDown(KeyCode.Escape) && _isOpenInventoryOpen)
       {
-         CloseMenu();
+         CloseALlPanel();
+         _isOpenInventoryOpen = false;
+         pauseMenu.SetActive(true);
       }
    }
 
    public void CloseMenu()
+   {
+      CloseALlPanel();
+      _isOpenInventoryOpen = false;
+      pauseMenu.SetActive(true);
+      
+   }
+
+   public void CloseALlPanel()
    {
       atiPanel.SetActive(false);
       florPanel.SetActive(false);
@@ -226,8 +235,5 @@ public class OpenInventory : MonoBehaviour
       sipaPanel.SetActive(false);
       patinteroPanel.SetActive(false);
       pikoPanel.SetActive(false);
-      _isOpenInventoryOpen = false;
-      pauseMenu.SetActive(true);
-      
    }
 }
