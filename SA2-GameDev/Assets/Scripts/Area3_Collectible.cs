@@ -23,8 +23,8 @@ public class Area3_Collectible : MonoBehaviour
             Destroy(collision.gameObject);
             _paper++;
         }
-        if(_coins >= 20 && _paper==2 ){
-            Instantiate(portal,new Vector3(1152,7,0),Quaternion.identity);
+        if(_coins >= 30 && _paper==2 ){
+            Instantiate(portal,new Vector3(1148,6,0),Quaternion.identity);
         }
         coinText.text="Coins:" + _coins;
         paperText.text="Paper:"+_paper;
