@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 public class OpenInventory : MonoBehaviour
@@ -15,6 +14,8 @@ public class OpenInventory : MonoBehaviour
    private bool _isPage8Collected;
    private bool _isPage9Collected;
 
+   private bool _isPage10Collected;
+
    private bool _isPage1Open;
    private bool _isPage2Open;
    private bool _isPage3Open;
@@ -25,7 +26,9 @@ public class OpenInventory : MonoBehaviour
    
    private bool _isPage7Open;
    private bool _isPage8Open;
-   //private bool _isPage9Open;
+   private bool _isPage9Open;
+
+   //private bool _isPage10Open;
    
    private bool _isOpenInventoryOpen;
 
@@ -40,6 +43,7 @@ public class OpenInventory : MonoBehaviour
    [SerializeField] private GameObject manoPanel;
    [SerializeField] private GameObject bayanihanPanel;
    [SerializeField] private GameObject haranaPanel;
+   [SerializeField] private GameObject pabasaPanel;
    
    
    
@@ -56,6 +60,7 @@ public class OpenInventory : MonoBehaviour
       manoPanel.SetActive(false);
       bayanihanPanel.SetActive(false);
       haranaPanel.SetActive(false);
+      pabasaPanel.SetActive(false);
       _isOpenInventoryOpen = false;
 
       Scene currentScene = SceneManager.GetActiveScene();
@@ -126,6 +131,11 @@ public class OpenInventory : MonoBehaviour
       if (col.CompareTag("TornPaper9"))
       {
          _isPage9Collected = true;
+      }
+
+      if (col.CompareTag("TornPaper10"))
+      {
+         _isPage10Collected = true;
       }
    }
 
@@ -276,13 +286,31 @@ public class OpenInventory : MonoBehaviour
          {
             empPanel.SetActive(false);
             haranaPanel.SetActive(true);
-            //_isPage9Open = true;
+            _isPage9Open = true;
 
          }
-         else if (!_isPage7Collected)
+         else if (!_isPage9Collected)
          {
             empPanel.SetActive(true);
-            //_isPage9Open = true;
+            _isPage9Open = true;
+
+         }
+      }
+      else if (_isPage9Open)
+      {
+         haranaPanel.SetActive(false);
+         _isPage9Open = false;
+         if (_isPage10Collected)
+         {
+            empPanel.SetActive(false);
+            pabasaPanel.SetActive(true);
+            //_isPage1Open = true;
+
+         }
+         else if (!_isPage10Collected)
+         {
+            empPanel.SetActive(true);
+            //_isPage10Open = true;
 
          }
       }
@@ -307,7 +335,7 @@ public class OpenInventory : MonoBehaviour
       
    }
 
-   public void CloseALlPanel()
+   private void CloseALlPanel()
    {
       atiPanel.SetActive(false);
       florPanel.SetActive(false);
