@@ -8,6 +8,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/ChangeControls.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/KeyAreas/AtiAtihan/Dialogue1.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/KeyAreas/AtiAtihan/Warning.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/KeyAreas/LandMarks.cs" root0="FORCE_HIGHLIGHTING" />
@@ -128,7 +129,7 @@
       <workItem from="1671065109221" duration="679000" />
       <workItem from="1671105881873" duration="1506000" />
       <workItem from="1671357985657" duration="1079000" />
-      <workItem from="1671375673893" duration="1318000" />
+      <workItem from="1671375673893" duration="2468000" />
     </task>
     <servers />
   </component>
