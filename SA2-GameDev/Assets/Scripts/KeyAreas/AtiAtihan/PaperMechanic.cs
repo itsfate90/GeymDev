@@ -56,7 +56,7 @@ public class PaperMechanic : MonoBehaviour
             
         }
         
-        if (Input.GetMouseButtonDown(0) && isDone)
+        if (Input.anyKey && isDone || (Input.GetKeyDown(0) && isDone))
         {
             
             if (textComponent.text == lines[_index])
