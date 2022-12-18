@@ -76,7 +76,7 @@ public class Npc1Interaction : MonoBehaviour
             Time.timeScale = 0f;
         }
         
-        if (Input.GetMouseButtonDown(0) || (Input.GetKeyDown(KeyCode.E) && isSentenceDone))
+        if (Input.anyKey && isSentenceDone)
         {
             
             if (textComponent.text == lines[_index])
