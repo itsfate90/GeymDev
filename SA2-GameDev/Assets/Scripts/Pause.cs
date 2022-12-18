@@ -40,7 +40,7 @@ public class Pause : MonoBehaviour
                 cheatMenu.SetActive(false);
                 _isCheatPanelOpen = false;
                 Time.timeScale = 0f;
-                pauseMenu.SetActive(true);
+                PauseGame();
                
             }
 
@@ -49,7 +49,7 @@ public class Pause : MonoBehaviour
                 helpMenu.SetActive(false);
                 _isHelpMenuOpen = false;
                 Time.timeScale = 0f;
-                pauseMenu.SetActive(true);
+                PauseGame();
                 
             }
         }
@@ -90,6 +90,7 @@ public class Pause : MonoBehaviour
         
         cheatMenu.SetActive(true);
         _isCheatPanelOpen = true;
+        pauseMenu.SetActive(false);
     }
 
     public void Level1()
