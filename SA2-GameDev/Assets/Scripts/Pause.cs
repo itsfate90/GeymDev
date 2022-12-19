@@ -9,10 +9,12 @@ public class Pause : MonoBehaviour
     [SerializeField]  GameObject pauseMenu;
     [SerializeField] GameObject cheatMenu;
     [SerializeField] private GameObject helpMenu;
+    [SerializeField] private AudioSource buttonSoundEffect;
 
 
     private void Start()
     {
+        buttonSoundEffect.Stop();
         Time.timeScale = 1f;
         _isPaused = false;
         _isCheatPanelOpen = false;
@@ -58,6 +60,7 @@ public class Pause : MonoBehaviour
 
     public void ResumeGame()
     {
+        buttonSoundEffect.Play();
         pauseMenu.SetActive(false);
         Time.timeScale = 1f;
         _isPaused = false;
@@ -65,7 +68,8 @@ public class Pause : MonoBehaviour
     }
 
     void PauseGame()
-    {
+    { 
+        buttonSoundEffect.Play();
        pauseMenu.SetActive(true);
        Time.timeScale = 0f;
        _isPaused = true;
@@ -74,12 +78,14 @@ public class Pause : MonoBehaviour
 
     public void LoadMenu()
     {
+        buttonSoundEffect.Play();
         SceneManager.LoadScene("MainMenu");
 
     }
 
     public void QuitGame()
     {
+        buttonSoundEffect.Play();
         Application.Quit();
         Debug.Log("Quit");
         
@@ -87,6 +93,7 @@ public class Pause : MonoBehaviour
 
     public void Cheat()
     {
+        buttonSoundEffect.Play();
         
         cheatMenu.SetActive(true);
         _isCheatPanelOpen = true;
@@ -95,22 +102,26 @@ public class Pause : MonoBehaviour
 
     public void Level1()
     {
+        buttonSoundEffect.Play();
         SceneManager.LoadScene("SampleScene");
         pauseMenu.SetActive(false);
     }
     public void Level2()
     {
+        buttonSoundEffect.Play();
         SceneManager.LoadScene("Area2");
         pauseMenu.SetActive(false);
     }
     public void Level3()
     {
+        buttonSoundEffect.Play();
         SceneManager.LoadScene("Area3");
         pauseMenu.SetActive(false);
     }
 
     public void HelpButton()
     {
+        buttonSoundEffect.Play();
         helpMenu.SetActive(true);
         _isHelpMenuOpen = true;
         pauseMenu.SetActive(false);
@@ -118,6 +129,7 @@ public class Pause : MonoBehaviour
 
     public void ReturnButton()
     {
+        buttonSoundEffect.Play();
         helpMenu.SetActive(false);
         _isHelpMenuOpen = false;
         pauseMenu.SetActive(true);
