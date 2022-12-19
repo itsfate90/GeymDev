@@ -24,14 +24,16 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetButtonDown("Jump"))
         {   
-            jump = true;
-            
-            
-                jumpSoundEffect.Play();
-            
-            animator.SetBool("IsJumping", true);
+            JumpKey();
            
         }
+    }
+
+    public void JumpKey()
+    {
+        jump = true;
+        jumpSoundEffect.Play();
+        animator.SetBool("IsJumping", true);
     }
 
    
