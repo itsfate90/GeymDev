@@ -1,4 +1,4 @@
-using System;
+using System.Collections;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -12,13 +12,33 @@ public class PlayerMovement : MonoBehaviour
     //private bool _isGround;
     [SerializeField] private AudioSource jumpSoundEffect;
 
-  
+    [SerializeField] private GameObject joystickPanel;
+    public Joystick Js;
+
+   
+    
+    
 
     void Update()
     {
-        horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
+#if UNITY_STANDALONE_WIN
+            Debug.Log("stand alone windows");
+            joystickPanel.SetActive(false);
+            horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
+             animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
+      
+
+            if (Input.GetButtonDown("Jump"))
+            {   
+                JumpKey();
+           
+            }
+#endif
         
-     
+#if UNITY_IOS
+        Debug.Log("IOS");
+        joystickPanel.SetActive(true);
+        horizontalMove = Js.Horizontal * runSpeed;
         animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
       
 
@@ -27,6 +47,22 @@ public class PlayerMovement : MonoBehaviour
             JumpKey();
            
         }
+        
+#endif
+#if UNITY_ANDROID
+        Debug.Log("Android");
+        joystickPanel.SetActive(true);
+        horizontalMove = Js.Horizontal * runSpeed;
+        animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
+      
+
+        if (Input.GetButtonDown("Jump"))
+        {   
+            JumpKey();
+           
+        }
+#endif
+
     }
 
     public void JumpKey()
