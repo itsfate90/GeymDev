@@ -13,6 +13,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private AudioSource jumpSoundEffect;
 
     [SerializeField] private GameObject joystickPanel;
+    
     public Joystick Js;
 
    
@@ -38,6 +39,7 @@ public class PlayerMovement : MonoBehaviour
 #if UNITY_IOS
         Debug.Log("IOS");
         joystickPanel.SetActive(true);
+        
         horizontalMove = Js.Horizontal * runSpeed;
         animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
       
@@ -52,6 +54,7 @@ public class PlayerMovement : MonoBehaviour
 #if UNITY_ANDROID
         Debug.Log("Android");
         joystickPanel.SetActive(true);
+        
         horizontalMove = Js.Horizontal * runSpeed;
         animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
       
