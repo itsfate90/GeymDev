@@ -75,6 +75,14 @@ public class Npc1Interaction : MonoBehaviour
             StartDialogue();
             Time.timeScale = 0f;
         }
+        if (isPlayerClose && Input.GetKeyDown(KeyCode.Mouse0) && !isAlreadyStarted)
+        {
+            indicatorPanel.SetActive(false);
+            dialoguePanel.SetActive(true);
+            isAlreadyStarted = true;
+            StartDialogue();
+            Time.timeScale = 0f;
+        }
         
         if (Input.anyKey && isSentenceDone)
         {
