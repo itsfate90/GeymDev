@@ -10,6 +10,7 @@ public class Pause : MonoBehaviour
     [SerializeField] GameObject cheatMenu;
     [SerializeField] private GameObject helpMenu;
     [SerializeField] private AudioSource buttonSoundEffect;
+    [SerializeField] private GameObject mainMenuButton;
 
 
     private void Start()
@@ -26,6 +27,9 @@ public class Pause : MonoBehaviour
 
     void Update()
     {
+        
+        #if UNITY_STANDALONE_WIN
+        mainMenuButton.SetActive(false);
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (_isPaused)
@@ -55,6 +59,27 @@ public class Pause : MonoBehaviour
                 
             }
         }
+#endif
+        #if UNITY_IOS
+        if (_isPaused)
+        {
+            mainMenuButton.SetActive(false);
+        }
+        else
+        {
+            mainMenuButton.SetActive(true);
+        }
+#endif
+        #if UNITY_ANDROID
+        if (_isPaused)
+        {
+            mainMenuButton.SetActive(false);
+        }
+        else
+        {
+            mainMenuButton.SetActive(true);
+        }
+#endif
         
     }
 
@@ -69,6 +94,7 @@ public class Pause : MonoBehaviour
 
     void PauseGame()
     { 
+        mainMenuButton.SetActive(false);
         buttonSoundEffect.Play();
        pauseMenu.SetActive(true);
        Time.timeScale = 0f;
@@ -134,5 +160,18 @@ public class Pause : MonoBehaviour
         _isHelpMenuOpen = false;
         pauseMenu.SetActive(true);
         
+    }
+
+    public void PauseButton()
+    {
+        if (!_isPaused)
+        {
+            PauseGame();
+        }
+        else
+        {
+            ResumeGame();
+            
+        }
     }
 }

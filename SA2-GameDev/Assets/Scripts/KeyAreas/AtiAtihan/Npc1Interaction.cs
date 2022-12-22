@@ -51,9 +51,7 @@ public class Npc1Interaction : MonoBehaviour
             {
                 indicatorPanel.SetActive(false);
             }
-            
         }
-        
     }
 
     public void OnTriggerExit2D(Collider2D other)
@@ -110,7 +108,6 @@ public class Npc1Interaction : MonoBehaviour
             yield return new WaitForSecondsRealtime(textSpeed);
             isSentenceDone = true;
             continuePanel.SetActive(true);
-
         }
     }
 
