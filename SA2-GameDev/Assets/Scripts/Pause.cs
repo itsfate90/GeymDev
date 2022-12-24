@@ -158,6 +158,10 @@ public class Pause : MonoBehaviour
 
     public void HelpButton()
     {
+        if (_isMobile)
+        {
+            returnButton.SetActive(true);
+        }
         buttonSoundEffect.Play();
         helpMenu.SetActive(true);
         _isHelpMenuOpen = true;
