@@ -59,7 +59,7 @@ public class Pause : MonoBehaviour
 
             if (_isHelpMenuOpen)
             {
-                helpMenu.SetActive(false);
+                helpMenuForPC.SetActive(false);
                 _isHelpMenuOpen = false;
                 Time.timeScale = 0f;
                 PauseGame();
