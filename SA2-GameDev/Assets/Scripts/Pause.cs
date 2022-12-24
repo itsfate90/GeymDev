@@ -9,7 +9,8 @@ public class Pause : MonoBehaviour
     private bool _isMobile;
     [SerializeField]  GameObject pauseMenu;
     [SerializeField] GameObject cheatMenu;
-    [SerializeField] private GameObject helpMenu;
+    [SerializeField] private GameObject helpMenuForPC;
+    [SerializeField] private GameObject helpMenuForMobile;
     [SerializeField] private AudioSource buttonSoundEffect;
     [SerializeField] private GameObject mainMenuButton;
     [SerializeField] private GameObject returnButton;
@@ -25,7 +26,8 @@ public class Pause : MonoBehaviour
         _isHelpMenuOpen = true;
         cheatMenu.SetActive(false);
         pauseMenu.SetActive(false);
-        helpMenu.SetActive(false);
+        helpMenuForPC.SetActive(false);
+        helpMenuForMobile.SetActive(false);
         returnButton.SetActive(false);
     }
 
@@ -70,10 +72,12 @@ public class Pause : MonoBehaviour
         if (_isPaused)
         {
             mainMenuButton.SetActive(false);
+            mobileControls.SetActive(false);
         }
         else
         {
             mainMenuButton.SetActive(true);
+            mobileControls.SetActive(true);
         }
 #endif
         #if UNITY_ANDROID
@@ -164,9 +168,14 @@ public class Pause : MonoBehaviour
         if (_isMobile)
         {
             returnButton.SetActive(true);
+            helpMenuForMobile.SetActive(true);
         }
+        else
+        {
+            helpMenuForPC.SetActive(true);
+        }
+        
         buttonSoundEffect.Play();
-        helpMenu.SetActive(true);
         _isHelpMenuOpen = true;
         pauseMenu.SetActive(false);
     }
@@ -176,9 +185,13 @@ public class Pause : MonoBehaviour
         if (_isMobile)
         {
             returnButton.SetActive(false);
+            helpMenuForMobile.SetActive(false);
+        }
+        else
+        {
+            helpMenuForPC.SetActive(false);
         }
         buttonSoundEffect.Play();
-        helpMenu.SetActive(false);
         cheatMenu.SetActive(false);
         _isHelpMenuOpen = false;
         pauseMenu.SetActive(true);
