@@ -6,11 +6,13 @@ public class Pause : MonoBehaviour
     private bool _isPaused;
     private bool _isCheatPanelOpen;
     private bool _isHelpMenuOpen;
+    private bool _isMobile;
     [SerializeField]  GameObject pauseMenu;
     [SerializeField] GameObject cheatMenu;
     [SerializeField] private GameObject helpMenu;
     [SerializeField] private AudioSource buttonSoundEffect;
     [SerializeField] private GameObject mainMenuButton;
+    [SerializeField] private GameObject returnButton;
 
 
     private void Start()
@@ -23,12 +25,14 @@ public class Pause : MonoBehaviour
         cheatMenu.SetActive(false);
         pauseMenu.SetActive(false);
         helpMenu.SetActive(false);
+        returnButton.SetActive(false);
     }
 
     void Update()
     {
         
         #if UNITY_STANDALONE_WIN
+        _isMobile = false;
         mainMenuButton.SetActive(false);
         if (Input.GetKeyDown(KeyCode.Escape))
         {
@@ -61,6 +65,7 @@ public class Pause : MonoBehaviour
         }
 #endif
         #if UNITY_IOS
+        _isMobile = true;
         if (_isPaused)
         {
             mainMenuButton.SetActive(false);
@@ -71,6 +76,7 @@ public class Pause : MonoBehaviour
         }
 #endif
         #if UNITY_ANDROID
+        _isMobile = true;
         if (_isPaused)
         {
             mainMenuButton.SetActive(false);
@@ -79,6 +85,7 @@ public class Pause : MonoBehaviour
         {
             mainMenuButton.SetActive(true);
         }
+       
 #endif
         
     }
@@ -94,6 +101,7 @@ public class Pause : MonoBehaviour
 
     void PauseGame()
     { 
+        
         mainMenuButton.SetActive(false);
         buttonSoundEffect.Play();
        pauseMenu.SetActive(true);
@@ -119,8 +127,11 @@ public class Pause : MonoBehaviour
 
     public void Cheat()
     {
+        if (_isMobile)
+        {
+            returnButton.SetActive(true);
+        }
         buttonSoundEffect.Play();
-        
         cheatMenu.SetActive(true);
         _isCheatPanelOpen = true;
         pauseMenu.SetActive(false);
@@ -155,8 +166,13 @@ public class Pause : MonoBehaviour
 
     public void ReturnButton()
     {
+        if (_isMobile)
+        {
+            returnButton.SetActive(false);
+        }
         buttonSoundEffect.Play();
         helpMenu.SetActive(false);
+        cheatMenu.SetActive(false);
         _isHelpMenuOpen = false;
         pauseMenu.SetActive(true);
         
