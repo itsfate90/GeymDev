@@ -53,12 +53,9 @@ public class PlayerMovement : MonoBehaviour
 #endif
 #if UNITY_ANDROID
         Debug.Log("Android");
-        joystickPanel.SetActive(true);
-        
         horizontalMove = Js.Horizontal * runSpeed;
         animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
-      
-
+        
         if (Input.GetButtonDown("Jump"))
         {   
             JumpKey();

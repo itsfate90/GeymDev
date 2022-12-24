@@ -13,6 +13,7 @@ public class Pause : MonoBehaviour
     [SerializeField] private AudioSource buttonSoundEffect;
     [SerializeField] private GameObject mainMenuButton;
     [SerializeField] private GameObject returnButton;
+    [SerializeField] private GameObject mobileControls;
 
 
     private void Start()
@@ -80,10 +81,12 @@ public class Pause : MonoBehaviour
         if (_isPaused)
         {
             mainMenuButton.SetActive(false);
+            mobileControls.SetActive(false);
         }
         else
         {
             mainMenuButton.SetActive(true);
+            mobileControls.SetActive(true);
         }
        
 #endif
@@ -100,13 +103,13 @@ public class Pause : MonoBehaviour
     }
 
     void PauseGame()
-    { 
-        
+    {
+        _isPaused = true;
         mainMenuButton.SetActive(false);
         buttonSoundEffect.Play();
        pauseMenu.SetActive(true);
        Time.timeScale = 0f;
-       _isPaused = true;
+       
 
     }
 
