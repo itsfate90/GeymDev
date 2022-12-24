@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using UnityEngine;
 using TMPro;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 
@@ -27,12 +28,23 @@ public class Npc1Interaction : MonoBehaviour
     public bool isPlayerClose;
     public bool isAlreadyStarted;
     public bool isSentenceDone;
+    public bool isMobile;
+    public bool doubleClicked;
     
 
     private int _index;
 
     private void Start()
     {
+        #if UNITY_STANDALONE_WIN
+        isMobile = false;
+        #endif
+        #if UNITY_ANDROID
+        isMobile = true;
+#endif
+        #if UNITY_IOS
+        isMobile = true;
+#endif
         textComponent.text= String.Empty;
         isAlreadyStarted = false;
         indicatorPanel.SetActive(false);
@@ -73,8 +85,6 @@ public class Npc1Interaction : MonoBehaviour
             StartDialogue();
             Time.timeScale = 0f;
         }
-        
-        
         if (Input.anyKey && isSentenceDone)
         {
             
@@ -85,7 +95,6 @@ public class Npc1Interaction : MonoBehaviour
             else
             {
                 StopAllCoroutines();
-                
             }
         }
     }
