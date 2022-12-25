@@ -11,6 +11,8 @@ public class Npc1Interaction : MonoBehaviour
 {
     [SerializeField] GameObject dialoguePanel;
     [SerializeField] GameObject continuePanel;
+    [SerializeField] GameObject talkButton;
+    
     [SerializeField] Image speakerImage;
     [SerializeField] Sprite speakerSprite;
     
@@ -77,7 +79,15 @@ public class Npc1Interaction : MonoBehaviour
 
     private void Update()
     {
-        if (isPlayerClose && Input.GetKeyDown(KeyCode.E) && !isAlreadyStarted)
+        if (isMobile && isPlayerClose && !isAlreadyStarted)
+        {
+            talkButton.SetActive(true);
+        }
+        else
+        {
+            talkButton.SetActive(false);
+        }
+        if (isPlayerClose && Input.GetKeyDown(KeyCode.E) && !isAlreadyStarted && !isMobile)
         {
             indicatorPanel.SetActive(false);
             dialoguePanel.SetActive(true);
@@ -136,6 +146,28 @@ public class Npc1Interaction : MonoBehaviour
             textComponent.text= String.Empty;
             isAlreadyStarted = false;
             indicatorPanel.SetActive(true);
+        }
+    }
+
+    public void InteractButton()
+    {
+        indicatorPanel.SetActive(false);
+        dialoguePanel.SetActive(true);
+        isAlreadyStarted = true;
+        StartDialogue();
+        Time.timeScale = 0f;
+        
+        if (Input.anyKey && isSentenceDone)
+        {
+            
+            if (textComponent.text == lines[_index])
+            {
+                NextLine();
+            }
+            else
+            {
+                StopAllCoroutines();
+            }
         }
     }
 }
