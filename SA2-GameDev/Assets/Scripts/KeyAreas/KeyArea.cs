@@ -64,6 +64,7 @@ public class KeyArea : MonoBehaviour
       {
          if (Input.GetKeyDown(KeyCode.E) && !_isAlreadyStarted && !_isMobile)
          {
+            textComponent.text = String.Empty;
             _isAlreadyStarted = true;
             interactPanel.SetActive(false);
             welcomePanel.SetActive(true);
@@ -98,6 +99,7 @@ public class KeyArea : MonoBehaviour
 
    public void InteractButton()
    {
+      textComponent.text = String.Empty;
       _isAlreadyStarted = true;
       interactPanel.SetActive(false);
       welcomePanel.SetActive(true);
