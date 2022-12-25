@@ -8,16 +8,27 @@ public class KeyArea : MonoBehaviour
 {
    [SerializeField] private GameObject welcomePanel;
    [SerializeField] private GameObject interactPanel;
+   [SerializeField] private GameObject talkButton;
    public TextMeshProUGUI textComponent;
    private int _index;
    public string[] lines;
    public float textSpeed;
    private bool _isPlayerNear;
    private bool _isAlreadyStarted;
+   private bool _isMobile;
    
 
    private void Start()
    {
+      #if UNITY_STANDALONE_WIN
+      _isMobile = false;
+      #endif
+      #if UNITY_IOS
+      _isMobile = true;
+#endif
+      #if UNITY_ANDROID
+      _isMobile = true;
+      #endif
       welcomePanel.SetActive(false);
       interactPanel.SetActive(false);
       _isAlreadyStarted = false;
@@ -43,6 +54,7 @@ public class KeyArea : MonoBehaviour
          StopAllCoroutines();
          textComponent.text = String.Empty;
          _isAlreadyStarted = false;
+         welcomePanel.SetActive(false);
       }
    }
 
@@ -50,13 +62,22 @@ public class KeyArea : MonoBehaviour
    {
       if(_isPlayerNear)
       {
-         if (Input.GetKeyDown(KeyCode.E) && !_isAlreadyStarted)
+         if (Input.GetKeyDown(KeyCode.E) && !_isAlreadyStarted && !_isMobile)
          {
             _isAlreadyStarted = true;
             interactPanel.SetActive(false);
             welcomePanel.SetActive(true);
             StartWelcome();
          }
+      }
+
+      if (_isPlayerNear && _isMobile)
+      {
+         talkButton.SetActive(true);
+      }
+      else
+      {
+         talkButton.SetActive(false);
       }
    }
 
@@ -73,5 +94,13 @@ public class KeyArea : MonoBehaviour
          textComponent.text += c;
          yield return new WaitForSecondsRealtime(textSpeed);
       }
+   }
+
+   public void InteractButton()
+   {
+      _isAlreadyStarted = true;
+      interactPanel.SetActive(false);
+      welcomePanel.SetActive(true);
+      StartWelcome();
    }
 }
