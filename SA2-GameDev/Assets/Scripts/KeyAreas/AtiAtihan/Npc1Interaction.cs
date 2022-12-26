@@ -106,6 +106,11 @@ public class Npc1Interaction : MonoBehaviour
             else
             {
                 StopAllCoroutines();
+                if (isPlayerClose)
+                {
+                    talkButton.gameObject.SetActive(true);
+                    
+                }
             }
         }
     }
@@ -152,6 +157,7 @@ public class Npc1Interaction : MonoBehaviour
 
     public void InteractButton()
     {
+        talkButton.gameObject.SetActive(false);
         indicatorPanel.SetActive(false);
         dialoguePanel.SetActive(true);
         isAlreadyStarted = true;
