@@ -36,7 +36,7 @@ public class MenuController : MonoBehaviour
 
     public void StartButton()
     {
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("StoryScene");
     }
 
     public void ControlButton()
