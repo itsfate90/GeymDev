@@ -3,13 +3,27 @@ using UnityEngine.SceneManagement;
 
 public class MenuController : MonoBehaviour
 {
-    [SerializeField] private GameObject guidePanel;
+    [SerializeField] private GameObject guidePanelForPc;
+    [SerializeField] private GameObject guidePanelForMobile;
     [SerializeField] private GameObject mainMenuPanel;
+    [SerializeField] private GameObject returnButton;
     private bool _isguidePanelOpen;
+    private bool _isMobile;
 
     private void Start()
     {
-        guidePanel.SetActive(false);
+        #if UNITY_STANDALONE_WIN
+        _isMobile = false;
+        #endif
+        #if UNITY_IOS
+        _isMobile = true;
+        #endif
+        #if UNITY_ANDROID
+        _isMobile = true;
+        #endif
+        guidePanelForPc.SetActive(false);
+        guidePanelForMobile.SetActive(false);
+        returnButton.SetActive(false);
         _isguidePanelOpen = false;
         mainMenuPanel.SetActive(true);
     }
@@ -28,23 +42,41 @@ public class MenuController : MonoBehaviour
     public void ControlButton()
     {
         mainMenuPanel.SetActive(false);
-        guidePanel.SetActive(true);
         _isguidePanelOpen = true;
+        if (_isMobile)
+        {
+            guidePanelForMobile.SetActive(true);
+        }
+        else
+        {
+            guidePanelForPc.SetActive(true);
+        }
+
+
     }
 
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Escape) && _isguidePanelOpen)
+        if(Input.GetKeyDown(KeyCode.Escape) && _isguidePanelOpen &&!_isMobile)
         {
-            guidePanel.SetActive(false);
+            guidePanelForPc.SetActive(false);
             _isguidePanelOpen = false;
             mainMenuPanel.SetActive(true);
+        }
+
+        if (_isMobile && _isguidePanelOpen)
+        {
+            returnButton.SetActive(true);
+        }
+        else
+        {
+            returnButton.SetActive(false);
         }
     }
 
     public void ReturnButton()
     {
-        guidePanel.SetActive(false);
+        guidePanelForMobile.SetActive(false);
         _isguidePanelOpen = false;
         mainMenuPanel.SetActive(true);
     }
