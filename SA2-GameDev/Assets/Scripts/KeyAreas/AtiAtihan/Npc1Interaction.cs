@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using Mono.Cecil.Cil;
 using UnityEngine;
 using TMPro;
 using UnityEngine.EventSystems;
@@ -11,7 +12,7 @@ public class Npc1Interaction : MonoBehaviour
 {
     [SerializeField] GameObject dialoguePanel;
     [SerializeField] GameObject continuePanel;
-    [SerializeField] GameObject talkButton;
+    [SerializeField] Button talkButton;
     
     [SerializeField] Image speakerImage;
     [SerializeField] Sprite speakerSprite;
@@ -40,13 +41,11 @@ public class Npc1Interaction : MonoBehaviour
     {
         #if UNITY_STANDALONE_WIN
         isMobile = false;
-        #endif
-        #if UNITY_ANDROID
+        #elif UNITY_ANDROID || UNITY_IOS
         isMobile = true;
 #endif
-        #if UNITY_IOS
-        isMobile = true;
-#endif
+        
+
         textComponent.text= String.Empty;
         isAlreadyStarted = false;
         indicatorPanel.SetActive(false);
@@ -57,6 +56,11 @@ public class Npc1Interaction : MonoBehaviour
         if (col.CompareTag("Player"))
         {
             isPlayerClose = true;
+            if (isMobile && isPlayerClose && !isAlreadyStarted)
+            { 
+                talkButton.gameObject.SetActive(true);
+                talkButton.onClick.AddListener(InteractButton);
+            }
             if (isPlayerClose)
             {
                 indicatorPanel.SetActive(true);
@@ -73,20 +77,17 @@ public class Npc1Interaction : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             isPlayerClose = false;
+            if(isMobile && !isPlayerClose || isAlreadyStarted)
+            {
+                talkButton.gameObject.SetActive(false);
+                talkButton.onClick.RemoveListener(InteractButton);
+            }
             indicatorPanel.SetActive(false);
         }
     }
 
     private void Update()
     {
-        if (isMobile && isPlayerClose && !isAlreadyStarted)
-        {
-            talkButton.SetActive(true);
-        }
-        else
-        {
-            talkButton.SetActive(false);
-        }
         if (isPlayerClose && Input.GetKeyDown(KeyCode.E) && !isAlreadyStarted && !isMobile)
         {
             indicatorPanel.SetActive(false);

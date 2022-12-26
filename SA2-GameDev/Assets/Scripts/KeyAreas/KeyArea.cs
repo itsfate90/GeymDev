@@ -2,13 +2,14 @@ using System;
 using System.Collections;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 
 public class KeyArea : MonoBehaviour
 {
    [SerializeField] private GameObject welcomePanel;
    [SerializeField] private GameObject interactPanel;
-   [SerializeField] private GameObject talkButton;
+   [SerializeField] Button talkButton;
    public TextMeshProUGUI textComponent;
    private int _index;
    public string[] lines;
@@ -40,6 +41,11 @@ public class KeyArea : MonoBehaviour
       if (col.CompareTag("Player"))
       {
          _isPlayerNear = true;
+         if (_isMobile && _isPlayerNear && !_isAlreadyStarted)
+         { 
+            talkButton.gameObject.SetActive(true);
+            talkButton.onClick.AddListener(InteractButton);
+         }
          interactPanel.SetActive(true);
       }
    }
@@ -51,6 +57,11 @@ public class KeyArea : MonoBehaviour
          
          interactPanel.SetActive(false);
          _isPlayerNear = false;
+         if(_isMobile && !_isPlayerNear || _isAlreadyStarted)
+         {
+            talkButton.gameObject.SetActive(false);
+            talkButton.onClick.RemoveListener(InteractButton);
+         }
          StopAllCoroutines();
          textComponent.text = String.Empty;
          _isAlreadyStarted = false;
@@ -70,15 +81,6 @@ public class KeyArea : MonoBehaviour
             welcomePanel.SetActive(true);
             StartWelcome();
          }
-      }
-
-      if (_isPlayerNear && _isMobile)
-      {
-         talkButton.SetActive(true);
-      }
-      else
-      {
-         talkButton.SetActive(false);
       }
    }
 
