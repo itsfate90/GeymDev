@@ -119,7 +119,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4c7b28f66da10146bee5aa8094315c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  iLevelToLoad: 5
+  iLevelToLoad: 6
   sLevelToLoad: 
   useIntegerToLoadLevel: 1
 --- !u!61 &910733147228257557

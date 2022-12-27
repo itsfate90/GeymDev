@@ -16,7 +16,7 @@ public class ParallaxMethod2 : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         distance += Time.deltaTime*speed;
         
