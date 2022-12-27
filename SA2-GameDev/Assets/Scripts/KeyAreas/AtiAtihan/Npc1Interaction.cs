@@ -17,8 +17,8 @@ public class Npc1Interaction : MonoBehaviour
     [SerializeField] Image speakerImage;
     [SerializeField] Sprite speakerSprite;
     
-    [SerializeField] Image playerImage;
-    [SerializeField] Sprite playerSprite;
+    //[SerializeField] Image playerImage;
+    //[SerializeField] Sprite playerSprite;
     
     
 
@@ -118,7 +118,7 @@ public class Npc1Interaction : MonoBehaviour
     void StartDialogue()
     {
         speakerImage.sprite = speakerSprite;
-        playerImage.sprite = playerSprite;
+        //playerImage.sprite = playerSprite;
         _index = 0;
         StartCoroutine(TypeLine());
     }
