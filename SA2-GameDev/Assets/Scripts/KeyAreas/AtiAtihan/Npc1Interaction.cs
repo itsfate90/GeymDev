@@ -106,7 +106,7 @@ public class Npc1Interaction : MonoBehaviour
             else
             {
                 StopAllCoroutines();
-                if (isPlayerClose)
+                if (isPlayerClose && isMobile)
                 {
                     talkButton.gameObject.SetActive(true);
                     
