@@ -39,7 +39,6 @@ public class StoryScene : MonoBehaviour
             else
             {
                 StopAllCoroutines();
-                SceneManager.LoadScene("SampleScene");
             }
         }
     }
@@ -73,13 +72,7 @@ public class StoryScene : MonoBehaviour
         }
         else
         {
-            dialoguePanel.SetActive(false);
-            continuePanel.SetActive(false);
-            Time.timeScale = 1f;
-            textComponent.text= String.Empty;
-           
+            SceneManager.LoadScene("SampleScene");
         }
     }
-
-   
 }
