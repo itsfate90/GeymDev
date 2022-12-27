@@ -8,19 +8,27 @@ using UnityEngine.SceneManagement;
 public class StoryScene : MonoBehaviour
 {
     [SerializeField] GameObject dialoguePanel;
-    [SerializeField] GameObject continuePanel;
+    [SerializeField] GameObject continuePanelForPc;
+    [SerializeField] GameObject continuePanelForMobile;
     public TextMeshProUGUI textComponent;
     
     public string[] lines;
     public float textSpeed;
     public bool isSentenceDone;
+    public bool isMobile;
 
     private int _index;
 
     private void Start()
     {
+        #if UNITY_STANDALONE_WIN
+        isMobile = false;
+        #elif UNITY_IOS || UNITY_ANDROID
+        isMobile = true;
+        #endif
         textComponent.text= String.Empty;
-        continuePanel.SetActive(false);
+        continuePanelForMobile.SetActive(false);
+        continuePanelForPc.SetActive(false);
         StartDialogue();
     }
 
@@ -35,10 +43,12 @@ public class StoryScene : MonoBehaviour
             if (textComponent.text == lines[_index])
             {
                 NextLine();
+                
             }
             else
             {
                 StopAllCoroutines();
+                
             }
         }
     }
@@ -46,6 +56,7 @@ public class StoryScene : MonoBehaviour
     void StartDialogue()
     {
         _index = 0;
+        
         StartCoroutine(TypeLine());
     }
 
@@ -54,11 +65,19 @@ public class StoryScene : MonoBehaviour
         foreach (char c in lines[_index].ToCharArray())
         {
             isSentenceDone = false;
-            continuePanel.SetActive(false);
+            continuePanelForPc.SetActive(false);
+            continuePanelForMobile.SetActive(false);
             textComponent.text += c;
             yield return new WaitForSecondsRealtime(textSpeed);
             isSentenceDone = true;
-            continuePanel.SetActive(true);
+            if (isMobile)
+            {
+                continuePanelForMobile.SetActive(true);
+            }
+            else
+            {
+                continuePanelForPc.SetActive(true);
+            }
         }
     }
 
