@@ -82,6 +82,12 @@ public class KeyArea : MonoBehaviour
             StartWelcome();
          }
       }
+
+      if (_isMobile && _isAlreadyStarted)
+      {
+         talkButton.gameObject.SetActive(false);
+         talkButton.onClick.RemoveListener(InteractButton);
+      }
    }
 
    private void StartWelcome()
