@@ -26,6 +26,7 @@ TagManager:
   - TornPaper8
   - TornPaper9
   - TornPaper10
+  - flag
   layers:
   - Default
   - TransparentFX
