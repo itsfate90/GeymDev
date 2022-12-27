@@ -530,7 +530,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 100, y: 100, z: 100, w: 100}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -818,7 +818,21 @@ MonoBehaviour:
   continuePanel: {fileID: 967887605}
   textComponent: {fileID: 1747690353}
   lines:
-  - ' year 2070'
-  - Somewhere in the Philippines
+  - It's the year 2030. somewhere in the philippines, a young boy named ken was on
+    his way home. when he got home, he was greeted by his parents. "happy birthday
+    ken! here is our surprise for you. better wash your hands first before you open
+    your gift." the boy excitedly ran as fast as he could to the faucet and washed
+    his hands. it was so quick, that it made his parents doubt if he washed properly
+    but they decided to let it slide. ken quicly tore the gift wrapper, revealing
+    a book. ken was caught off guard. he was expecting a new mobile device or the
+    latest console for his birthday. dismayed, ken got mad and decided to tear some
+    of the pages, thew the book away and ran to his room.
+  - above the clouds, the gods were watching what was happening. they were disappointed
+    with ken. some argue that the boy's behavior is unacceptable and must be punished.
+    the others say that he is just a child and should be understood and forgiven,
+  - after some discussion between the gods, they decided to do something by altering
+    the boy's dream as a means of punishment
+  - in the dream, in order for ken to wake up, he must complete each task given to
+    him
   textSpeed: 0.01
   isSentenceDone: 0
