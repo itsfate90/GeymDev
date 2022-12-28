@@ -271,7 +271,7 @@ public class OpenInventory : MonoBehaviour
             _isPage8Open = true;
 
          }
-         else if (!_isPage7Collected)
+         else if (!_isPage8Collected)
          {
             empPanel.SetActive(true);
             _isPage8Open = true;
