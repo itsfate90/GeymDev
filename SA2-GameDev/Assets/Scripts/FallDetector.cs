@@ -30,6 +30,10 @@ public class FallDetector : MonoBehaviour
         {
             RespawnButton();
         }
+        if(Input.GetKeyDown(KeyCode.Escape) && _isRespawnScreenActive)
+        {
+            RespawnButton();
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
