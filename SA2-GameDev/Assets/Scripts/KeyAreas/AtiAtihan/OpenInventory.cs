@@ -280,7 +280,7 @@ public class OpenInventory : MonoBehaviour
       }
       else if (_isPage8Open)
       {
-         pikoPanel.SetActive(false);
+         bayanihanPanel.SetActive(false);
          _isPage8Open = false;
          if (_isPage9Collected)
          {
