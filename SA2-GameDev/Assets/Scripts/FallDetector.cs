@@ -45,15 +45,21 @@ public class FallDetector : MonoBehaviour
             Time.timeScale = 0f;
         }
         else if (collision.CompareTag("Checkpoint"))
-        {   
+        {
             respawnPoint = transform.position;
             checkpoint.SetActive(true);
-             
+
         }
         else if (collision.CompareTag("Enemy"))
         {
+            Time.timeScale = 0f;
             screenDeath.SetActive(true);
             _isRespawnScreenActive = true;
+
+        }
+
+        if (_isRespawnScreenActive)
+        {
             Time.timeScale = 0f;
         }
     }

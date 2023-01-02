@@ -34,6 +34,7 @@ public class Area3_Collectible : MonoBehaviour
 
         if(collision.gameObject.CompareTag("Coin"))
         {
+            
             collectionSoundEffect.Play();
             Destroy(collision.gameObject);
             _coins++;
@@ -41,14 +42,11 @@ public class Area3_Collectible : MonoBehaviour
 
         else if (collision.gameObject.CompareTag("Pages"))
         {
+           
             Destroy(collision.gameObject);
             _paper++;
         }
-        // if(_coins >= 30 && _paper==4 )
-        // {
-        //     endFlag.SetActive(true);   
-        // }
-
+        
         if (collision.gameObject.CompareTag("flag"))
         {
             _isPlayerClose = true;
@@ -69,42 +67,36 @@ public class Area3_Collectible : MonoBehaviour
 
     private void Update()
     {
-        if(_coins >= 30 && _paper==4)
+        if (_coins >= 0 && _paper == 0)
         {
             endFlag.SetActive(true);
-            if (_isPlayerClose && Input.GetKeyDown(KeyCode.E) && !isMobile && !_isPanelOpen)
-            {
+            Debug.Log("hello");
+        }
+        if (_isPlayerClose && Input.GetKeyDown(KeyCode.E) && !isMobile && !_isPanelOpen)
+        {
                 _isPanelOpen = true;
                 endPanel.SetActive(true);
-            }
+        }
 
-            if (_isPanelOpen && !isMobile && Input.GetKeyDown(KeyCode.Escape))
-            {
+        if (_isPanelOpen && !isMobile && Input.GetKeyDown(KeyCode.Escape))
+        {
                 Button();
-            }
+        }
 
-            if (_isPlayerClose && isMobile && !_isPanelOpen)
-            {
+        if (_isPlayerClose && isMobile && !_isPanelOpen)
+        {
                 talkButton.gameObject.SetActive(true);
                 talkButton.onClick.AddListener(InteractButton);
-            }
-
-            if (_isPanelOpen && isMobile)
-            {
-                returnButton.SetActive(true);
-            }
-
-            if (_isPanelOpen)
-            {
-                Time.timeScale = 0f;
-            }
-            else
-            {
-                Time.timeScale = 1f;
-            }
-
-
         }
+
+        if (_isPanelOpen && isMobile)
+        {
+                returnButton.SetActive(true);
+        }
+
+        if (_isPanelOpen) {
+                Time.timeScale = 0f; }
+
     }
     public void  Button()
     {

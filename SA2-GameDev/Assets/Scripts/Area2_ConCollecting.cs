@@ -23,7 +23,7 @@ public class Area2_ConCollecting : MonoBehaviour
             Destroy(collision.gameObject);
             _paper++;
         }
-        if(_coins >= 1 && _paper==3 ){
+        if(_coins >= 10 && _paper==3 ){
             Instantiate(portal,new Vector3(-1200,-1,0),Quaternion.identity);
         }
         coinText.text="Coins:" + _coins;
