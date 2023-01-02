@@ -10,23 +10,32 @@ public class PlayerMovement : MonoBehaviour
      public ParticleSystem dust;
     bool jump = false;
     //private bool _isGround;
+    private bool _isMobile;
     [SerializeField] private AudioSource jumpSoundEffect;
 
     [SerializeField] private GameObject joystickPanel;
     
     public Joystick Js;
 
-   
-    
+    private void Start()
+    {
+#if UNITY_STANDALONE_WIN
+    _isMobile = false;
+#elif UNITY_IOS || UNITY_ANDROID
+        _isMobile = true;
+
+#endif
+
+    }
     
 
     void Update()
     {
-#if UNITY_STANDALONE_WIN
-            Debug.Log("stand alone windows");
+        if (!_isMobile)
+        {
             joystickPanel.SetActive(false);
             horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
-             animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
+            animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
       
 
             if (Input.GetButtonDown("Jump"))
@@ -34,37 +43,24 @@ public class PlayerMovement : MonoBehaviour
                 JumpKey();
            
             }
-#endif
-        
-#if UNITY_IOS
-        Debug.Log("IOS");
-        joystickPanel.SetActive(true);
-        
-        horizontalMove = Js.Horizontal * runSpeed;
-        animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
-      
-
-        if (Input.GetButtonDown("Jump"))
-        {   
-            JumpKey();
-           
         }
+        else
+        {
+            horizontalMove = Js.Horizontal * runSpeed;
+            animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
         
-#endif
-#if UNITY_ANDROID
-        Debug.Log("Android");
-        horizontalMove = Js.Horizontal * runSpeed;
-        animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
-        
-        if (Input.GetButtonDown("Jump"))
-        {   
-            JumpKey();
+            if (Input.GetButtonDown("Jump"))
+            {   
+                JumpKey();
            
+            }
         }
-#endif
-
     }
 
+    
+    
+
+    
     public void JumpKey()
     {
         jump = true;
