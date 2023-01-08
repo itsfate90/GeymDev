@@ -1,6 +1,8 @@
 using System;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
 
 public class Area3_Collectible : MonoBehaviour
 {
@@ -13,6 +15,7 @@ public class Area3_Collectible : MonoBehaviour
     [SerializeField] private GameObject endPanel;
     [SerializeField] private GameObject returnButton;
     [SerializeField] private Button talkButton;
+    [SerializeField] private GameObject indicator;
     private bool _isPanelOpen;
     private bool _isPlayerClose;
     private bool isMobile;
@@ -26,6 +29,7 @@ public class Area3_Collectible : MonoBehaviour
         #endif
         endFlag.SetActive(false);
         endPanel.SetActive(false);
+        indicator.SetActive(false);
         _isPanelOpen = false;
         _isPlayerClose = false;
     }
@@ -50,6 +54,7 @@ public class Area3_Collectible : MonoBehaviour
         if (collision.gameObject.CompareTag("flag"))
         {
             _isPlayerClose = true;
+            indicator.SetActive(true);
         }
        
         coinText.text="Coins:" + _coins;
@@ -62,6 +67,7 @@ public class Area3_Collectible : MonoBehaviour
         if (other.CompareTag("flag"))
         {
             _isPlayerClose = false;
+            indicator.SetActive(false);
         }
     }
 
@@ -70,7 +76,7 @@ public class Area3_Collectible : MonoBehaviour
         if (_coins >= 0 && _paper == 0)
         {
             endFlag.SetActive(true);
-            Debug.Log("hello");
+            
         }
         if (_isPlayerClose && Input.GetKeyDown(KeyCode.E) && !isMobile && !_isPanelOpen)
         {
@@ -94,6 +100,11 @@ public class Area3_Collectible : MonoBehaviour
                 returnButton.SetActive(true);
         }
 
+        if (_isPanelOpen && Input.GetKeyDown(KeyCode.Return))
+        {
+            EndGame();
+        }
+
         if (_isPanelOpen) {
                 Time.timeScale = 0f; }
 
@@ -108,5 +119,10 @@ public class Area3_Collectible : MonoBehaviour
     {
         _isPanelOpen = true;
         endPanel.SetActive(true);
+    }
+
+    public void EndGame()
+    {
+        SceneManager.LoadScene("Credits");
     }
 }
