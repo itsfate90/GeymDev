@@ -140,7 +140,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &90351068
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -154,7 +154,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.07058824, g: 0.07058824, b: 0.07058824, a: 0.8039216}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -387,7 +387,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.07058824, g: 0.07058824, b: 0.07058824, a: 0.8039216}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -497,7 +497,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &967887606
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -511,7 +511,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.07058824, g: 0.07058824, b: 0.07058824, a: 0.8039216}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1042,13 +1042,10 @@ MonoBehaviour:
     a book. ken was caught off guard. he was expecting a new mobile device or the
     latest console for his birthday. dismayed, ken got mad and decided to tear some
     of the pages, thew the book away and ran to his room.
-  - above the clouds, the gods were watching what was happening. they were disappointed
-    with ken. some argue that the boy's behavior is unacceptable and must be punished.
-    the others say that he is just a child and should be understood and forgiven.
-  - after some discussion between the gods, they decided to do something by altering
-    the boy's dream as a means of punishment.
-  - in the dream, in order for ken to wake up, he must complete each task given to
-    him.
+  - "Little did Ken know that the book is something special. At midnight, the book
+    starts to glow and enters Ken\u2019s dream and alters it."
+  - 'In order for Ken to escape this altered dream, he must complete all the tasks
+    and reach the end. '
   textSpeed: 0.01
   isSentenceDone: 0
   isMobile: 0
