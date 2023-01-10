@@ -706,8 +706,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 50
-  m_fontSizeBase: 50
+  m_fontSize: 70
+  m_fontSizeBase: 70
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1033,15 +1033,16 @@ MonoBehaviour:
   continuePanelForMobile: {fileID: 90351067}
   textComponent: {fileID: 1747690353}
   lines:
-  - It's the year 2030. somewhere in the philippines, a young boy named ken was on
-    his way home. when he got home, he was greeted by his parents. "happy birthday
-    ken! here is our surprise for you. better wash your hands first before you open
-    your gift." the boy excitedly ran as fast as he could to the faucet and washed
-    his hands. it was so quick, that it made his parents doubt if he washed properly
-    but they decided to let it slide. ken quickly tore the gift wrapper, revealing
-    a book. ken was caught off guard. he was expecting a new mobile device or the
-    latest console for his birthday. dismayed, ken got mad and decided to tear some
-    of the pages, thew the book away and ran to his room.
+  - 'It''s the year 2030. somewhere in the philippines, a young boy named ken was
+    on his way home. when he got home, he was greeted by his parents. '
+  - '"happy birthday ken! here is our surprise for you. better wash your hands first
+    before you open your gift." the boy excitedly ran as fast as he could to the
+    faucet and washed his hands. it was so quick, that it made his parents doubt
+    if he washed properly but they decided to let it slide. ken quickly tore the
+    gift wrapper, revealing a book.'
+  - ken was caught off guard. he was expecting a new mobile device or the latest
+    console for his birthday. dismayed, ken got mad and decided to tear some of the
+    pages, threw the book away and ran to his room.
   - "Little did Ken know that the book is something special. At midnight, the book
     starts to glow and enters Ken\u2019s dream and alters it."
   - 'In order for Ken to escape this altered dream, he must complete all the tasks
