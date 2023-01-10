@@ -73,7 +73,7 @@ public class Area3_Collectible : MonoBehaviour
 
     private void Update()
     {
-        if (_coins >= 0 && _paper == 0)
+        if (_coins >= 35 && _paper == 4)
         {
             endFlag.SetActive(true);
             
