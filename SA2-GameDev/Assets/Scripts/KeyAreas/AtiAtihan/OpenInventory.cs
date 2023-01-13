@@ -344,5 +344,9 @@ public class OpenInventory : MonoBehaviour
       sipaPanel.SetActive(false);
       patinteroPanel.SetActive(false);
       pikoPanel.SetActive(false);
+      manoPanel.SetActive(false);
+      haranaPanel.SetActive(false);
+      pabasaPanel.SetActive(false);
+      bayanihanPanel.SetActive(false);
    }
 }
