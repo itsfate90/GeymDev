@@ -43,12 +43,10 @@ public class StoryScene : MonoBehaviour
             if (textComponent.text == lines[_index])
             {
                 NextLine();
-                
             }
             else
             {
                 StopAllCoroutines();
-                
             }
         }
     }
@@ -91,7 +89,12 @@ public class StoryScene : MonoBehaviour
         }
         else
         {
-            SceneManager.LoadScene("SampleScene");
+            EndPrologue();
         }
+    }
+
+     public void EndPrologue()
+    {
+        SceneManager.LoadScene("SampleScene");
     }
 }
