@@ -72,7 +72,7 @@ public class OpenInventory : MonoBehaviour
          _isPage2Collected = false;
          _isPage3Collected = false;
       }
-      else if (sceneName == "Area2")
+      if (sceneName == "Area2")
       {
          _isPage1Collected = true;
          _isPage2Collected = true;

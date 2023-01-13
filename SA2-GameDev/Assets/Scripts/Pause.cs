@@ -163,6 +163,13 @@ public class Pause : MonoBehaviour
         pauseMenu.SetActive(false);
     }
 
+    public void Credit()
+    {
+        buttonSoundEffect.Play();
+        SceneManager.LoadScene("Credits");
+        pauseMenu.SetActive(false);
+    }
+
     public void HelpButton()
     {
         if (_isMobile)
