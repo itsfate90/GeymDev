@@ -4,7 +4,7 @@ using UnityEngine;
 public class HealthCount : MonoBehaviour
 {
     public static int Health;
-    public Vector3 respawnPoint;
+    public Vector3 StartingSpawnPoint;
     [SerializeField] private GameObject heart1;
     [SerializeField] private GameObject heart2;
     [SerializeField] private GameObject heart3;
@@ -16,7 +16,7 @@ public class HealthCount : MonoBehaviour
 
     private void Start()
     {
-        respawnPoint = transform.position;
+        StartingSpawnPoint = transform.position;
         _isRespawnScreenActive = false;
         Health =5;
         FullHealth();
@@ -120,7 +120,7 @@ public class HealthCount : MonoBehaviour
         screenDeath.SetActive(false);
         _isRespawnScreenActive = false;
         Time.timeScale = 1f;
-        transform.position = respawnPoint;
+        transform.position = StartingSpawnPoint;
         Health = 5;
     }
     
