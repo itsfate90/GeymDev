@@ -48,19 +48,6 @@ public class FallDetector : MonoBehaviour
         {
             respawnPoint = transform.position;
             checkpoint.SetActive(true);
-
-        }
-        else if (collision.CompareTag("Enemy"))
-        {
-            Time.timeScale = 0f;
-            screenDeath.SetActive(true);
-            _isRespawnScreenActive = true;
-
-        }
-
-        if (_isRespawnScreenActive)
-        {
-            Time.timeScale = 0f;
         }
     }
 
@@ -79,5 +66,6 @@ public class FallDetector : MonoBehaviour
         _isRespawnScreenActive = false;
         Time.timeScale = 1f;
         transform.position = respawnPoint;
+        HealthCount.Health = 1;
     }
 }
