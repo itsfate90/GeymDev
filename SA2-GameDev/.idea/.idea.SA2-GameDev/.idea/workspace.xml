@@ -9,6 +9,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/ChangeControls.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/DestroyPotion.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/EnemyDamage.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/HealthPotion.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/KeyAreas/AtiAtihan/Dialogue1.cs" root0="FORCE_HIGHLIGHTING" />
@@ -154,7 +155,7 @@
       <workItem from="1675144493814" duration="6537000" />
       <workItem from="1675216970468" duration="13942000" />
       <workItem from="1675243206973" duration="2622000" />
-      <workItem from="1675260850729" duration="2502000" />
+      <workItem from="1675260850729" duration="3956000" />
     </task>
     <servers />
   </component>
