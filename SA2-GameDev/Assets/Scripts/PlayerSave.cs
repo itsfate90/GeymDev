@@ -1,7 +1,9 @@
 using System;
+using System.Numerics;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Serialization;
+using Vector3 = UnityEngine.Vector3;
 
 public class PlayerSave : MonoBehaviour
 {
@@ -12,13 +14,14 @@ public class PlayerSave : MonoBehaviour
 
   private void Start()
   {
+    
+    
     if(PlayerPrefs.GetInt("Saved") == 1)
     {
       x = PlayerPrefs.GetFloat("x");
       y = PlayerPrefs.GetFloat("y");
       z = PlayerPrefs.GetFloat("z");
       transform.position = new Vector3(x, y, z);
-      PlayerPrefs.SetInt("TimeToLoad",0);
       PlayerPrefs.Save();
     }
     Scene currentScene = SceneManager.GetActiveScene();
@@ -57,6 +60,7 @@ public class PlayerSave : MonoBehaviour
   public void Load()
   {
     SceneManager.LoadScene(PlayerPrefs.GetInt("savedScene"));
+   
     PlayerPrefs.Save();
    
 
