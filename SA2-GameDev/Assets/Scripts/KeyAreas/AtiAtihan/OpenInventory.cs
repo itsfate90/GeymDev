@@ -31,6 +31,7 @@ public class OpenInventory : MonoBehaviour
    //private bool _isPage10Open;
    
    private bool _isOpenInventoryOpen;
+  
 
    [SerializeField] private GameObject atiPanel;
    [SerializeField] private GameObject florPanel;
@@ -50,6 +51,20 @@ public class OpenInventory : MonoBehaviour
 
    private void Start()
    {
+      if (PlayerPrefs.GetInt("SavePage") == 1)
+      {
+         _isPage1Collected = (PlayerPrefs.GetInt("p1") != 0);
+         _isPage2Collected = (PlayerPrefs.GetInt("p2") != 0);
+         _isPage3Collected = (PlayerPrefs.GetInt("p3") != 0);
+         _isPage4Collected = (PlayerPrefs.GetInt("p4") != 0);
+         _isPage5Collected = (PlayerPrefs.GetInt("p5") != 0);
+         _isPage6Collected = (PlayerPrefs.GetInt("p6") != 0);
+         _isPage7Collected = (PlayerPrefs.GetInt("p7") != 0);
+         _isPage8Collected = (PlayerPrefs.GetInt("p8") != 0);
+         _isPage9Collected = (PlayerPrefs.GetInt("p9") != 0);
+         _isPage10Collected = (PlayerPrefs.GetInt("p10") != 0);
+         PlayerPrefs.Save();
+      }
       atiPanel.SetActive(false);
       florPanel.SetActive(false);
       panPanel.SetActive(false);
@@ -66,27 +81,27 @@ public class OpenInventory : MonoBehaviour
       Scene currentScene = SceneManager.GetActiveScene();
       string sceneName = currentScene.name;
 
-      if (sceneName == "SampleScene")
-      {
-         _isPage1Collected = false;
-         _isPage2Collected = false;
-         _isPage3Collected = false;
-      }
-      if (sceneName == "Area2")
-      {
-         _isPage1Collected = true;
-         _isPage2Collected = true;
-         _isPage3Collected = true;
-      }
-      else if (sceneName == "Area3")
-      {
-         _isPage1Collected = true;
-         _isPage2Collected = true;
-         _isPage3Collected = true;
-         _isPage4Collected = true;
-         _isPage5Collected = true;
-         _isPage6Collected = true;
-      }
+      //if (sceneName == "SampleScene")
+     //{
+        // _isPage1Collected = false;
+         //_isPage2Collected = false;
+         //_isPage3Collected = false;
+      //}
+      //if (sceneName == "Area2")
+      //{
+         //_isPage1Collected = true;
+         //_isPage2Collected = true;
+         //_isPage3Collected = true;
+     // }
+     // else if (sceneName == "Area3")
+      //{
+        // _isPage1Collected = true;
+         //_isPage2Collected = true;
+         //_isPage3Collected = true;
+         //_isPage4Collected = true;
+         //_isPage5Collected = true;
+         //_isPage6Collected = true;
+     // }
    }
 
    private void OnTriggerEnter2D(Collider2D col)
@@ -348,5 +363,23 @@ public class OpenInventory : MonoBehaviour
       haranaPanel.SetActive(false);
       pabasaPanel.SetActive(false);
       bayanihanPanel.SetActive(false);
+   }
+
+   public void Save_page()
+   {
+      int value;
+      PlayerPrefs.SetInt("SavePage", 1);
+      PlayerPrefs.SetInt("p1", (_isPage1Collected ? 1 : 0));
+      PlayerPrefs.SetInt("p2", (_isPage2Collected ? 1 : 0));
+      PlayerPrefs.SetInt("p3", (_isPage3Collected ? 1 : 0));
+      PlayerPrefs.SetInt("p4", (_isPage4Collected ? 1 : 0));
+      PlayerPrefs.SetInt("p5", (_isPage5Collected ? 1 : 0));
+      PlayerPrefs.SetInt("p6", (_isPage6Collected ? 1 : 0));
+      PlayerPrefs.SetInt("p7", (_isPage7Collected ? 1 : 0));
+      PlayerPrefs.SetInt("p8", (_isPage8Collected ? 1 : 0));
+      PlayerPrefs.SetInt("p9", (_isPage9Collected ? 1 : 0));
+      PlayerPrefs.SetInt("p10", (_isPage10Collected ? 1 : 0));
+     PlayerPrefs.Save();
+     
    }
 }
