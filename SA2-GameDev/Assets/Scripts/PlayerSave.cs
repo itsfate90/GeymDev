@@ -14,9 +14,6 @@ public class PlayerSave : MonoBehaviour
   {
     if(PlayerPrefs.GetInt("Saved") == 1)
     {
-      //startButton.SetActive(false);
-      //loadButton.SetActive(true);
-      //resetButton.SetActive(true);
       x = PlayerPrefs.GetFloat("x");
       y = PlayerPrefs.GetFloat("y");
       z = PlayerPrefs.GetFloat("z");
@@ -24,14 +21,9 @@ public class PlayerSave : MonoBehaviour
       PlayerPrefs.SetInt("TimeToLoad",0);
       PlayerPrefs.Save();
     }
-    else
-    {
-      //startButton.SetActive(true);
-      //loadButton.SetActive(false);
-      //resetButton.SetActive(false);
-    }
     Scene currentScene = SceneManager.GetActiveScene();
     string sceneName = currentScene.name;
+    
     
     if(sceneName == "MainMenu") 
     {
@@ -58,21 +50,23 @@ public class PlayerSave : MonoBehaviour
    PlayerPrefs.SetFloat("y", transform.position.y);
    PlayerPrefs.SetFloat("z", transform.position.z);
    PlayerPrefs.SetInt("Saved", 1);
+   PlayerPrefs.SetInt("savedScene", SceneManager.GetActiveScene().buildIndex);
    PlayerPrefs.Save();
     
   }
   public void Load()
   {
-    
+    SceneManager.LoadScene(PlayerPrefs.GetInt("savedScene"));
     PlayerPrefs.Save();
-    SceneManager.LoadScene("SampleScene");
-    
+   
+
   }
 
   public void ResetData()
   {
     PlayerPrefs.DeleteAll();
     loadButton.SetActive(false);
+    resetButton.SetActive(false);
     startButton.SetActive(true);
   }
 }

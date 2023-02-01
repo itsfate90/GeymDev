@@ -3,12 +3,15 @@ using UnityEngine.UI;
 
 public class CoinCollectible : MonoBehaviour
 {
+   
     private int _coins;
     private int _paper;
     [SerializeField] private Text coinText;
     [SerializeField] private Text paperText;
     [SerializeField] private AudioSource collectionSoundEffect;
      [SerializeField] private GameObject portal;
+
+    
     private void OnTriggerEnter2D(Collider2D collision) {
 
         if(collision.gameObject.CompareTag("Coin"))
@@ -28,6 +31,5 @@ public class CoinCollectible : MonoBehaviour
         }
         coinText.text="Coins:" + _coins;
         paperText.text="Paper:"+_paper;
-
     }
 }
