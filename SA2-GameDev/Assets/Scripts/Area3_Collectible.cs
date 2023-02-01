@@ -22,6 +22,9 @@ public class Area3_Collectible : MonoBehaviour
 
     private void Start()
     {
+        _coins = PlayerPrefs.GetInt("CoinSaveCountA3");
+        _paper = PlayerPrefs.GetInt("PageSaveCountA3");
+        PlayerPrefs.Save();
         #if UNITY_STANDALONE_WIN
         isMobile = false;
 #elif UNITY_ANDROID || UNITY_IOS
@@ -105,8 +108,15 @@ public class Area3_Collectible : MonoBehaviour
             EndGame();
         }
 
-        if (_isPanelOpen) {
-                Time.timeScale = 0f; }
+        if (_isPanelOpen) 
+        {
+            Time.timeScale = 0f; 
+        }
+
+        coinText.text = "Coins: " + _coins;
+        paperText.text = " Paper: " + _paper;
+
+
 
     }
     public void  Button()
@@ -125,4 +135,15 @@ public class Area3_Collectible : MonoBehaviour
     {
         SceneManager.LoadScene("Credits");
     }
+
+    public void SaveCoinPaperCountA3()
+    {
+        PlayerPrefs.SetInt("CoinSaveCountA3",_coins);
+        PlayerPrefs.SetInt("PageSaveCountA3",_paper);
+        PlayerPrefs.Save();
+    }
+    
+
+    
+
 }

@@ -42,7 +42,7 @@ public class CoinCollectible : MonoBehaviour
         //paperText.text="Paper:"+_paper;
      }
 
-     public void SaveCoinCount()
+     public void SaveCoinPaperCount()
      {
          PlayerPrefs.SetInt("CoinSaveCount",_coins);
          PlayerPrefs.SetInt("PageSaveCount",_paper);
