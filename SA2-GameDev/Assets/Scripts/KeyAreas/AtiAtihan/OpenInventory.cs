@@ -1,3 +1,4 @@
+using System.Security.Cryptography;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 public class OpenInventory : MonoBehaviour
@@ -31,6 +32,16 @@ public class OpenInventory : MonoBehaviour
    //private bool _isPage10Open;
    
    private bool _isOpenInventoryOpen;
+   private GameObject g1;
+   private GameObject g2;
+   private GameObject g3;
+   private GameObject g4;
+   private GameObject g5;
+   private GameObject g6;
+   private GameObject g7;
+   private GameObject g8;
+   private GameObject g9;
+   private GameObject g10;
   
 
    [SerializeField] private GameObject atiPanel;
@@ -51,8 +62,21 @@ public class OpenInventory : MonoBehaviour
 
    private void Start()
    {
+      
+      
       if (PlayerPrefs.GetInt("SavePage") == 1)
       {
+         g1 = GameObject.Find("paper1");
+         g2 = GameObject.Find("paper2");
+         g3 = GameObject.Find("paper3");
+         g4 = GameObject.Find("paper4");
+         g5 = GameObject.Find("paper5");
+         g6 = GameObject.Find("paper6");
+         g7 = GameObject.Find("paper7");
+         g8 = GameObject.Find("paper8");
+         g9 = GameObject.Find("paper9");
+         g10 = GameObject.Find("paper10");
+         
          _isPage1Collected = (PlayerPrefs.GetInt("p1") != 0);
          _isPage2Collected = (PlayerPrefs.GetInt("p2") != 0);
          _isPage3Collected = (PlayerPrefs.GetInt("p3") != 0);
@@ -69,42 +93,53 @@ public class OpenInventory : MonoBehaviour
       if (PlayerPrefs.GetInt("p1") == 1)
       {
          Destroy(GameObject.FindWithTag("TornPaper"));
+         
+         Destroy(g1);
       }
       if (PlayerPrefs.GetInt("p2") == 1)
       {
          Destroy(GameObject.FindWithTag("TornPaper2"));
+         Destroy(g2);
       }
       if (PlayerPrefs.GetInt("p3") == 1)
       {
          Destroy(GameObject.FindWithTag("TornPaper3"));
+         Destroy(g3);
       }
       if (PlayerPrefs.GetInt("p4") == 1)
       {
          Destroy(GameObject.FindWithTag("TornPaper4"));
+         Destroy(g4);
       }
       if(PlayerPrefs.GetInt("p5") == 1)
       {
          Destroy(GameObject.FindWithTag("TornPaper5"));
+         Destroy(g5);
       }
       if (PlayerPrefs.GetInt("p6") == 1)
       {
          Destroy(GameObject.FindWithTag("TornPaper6"));
+         Destroy(g6);
       }
       if (PlayerPrefs.GetInt("p7") == 1)
       {
          Destroy(GameObject.FindWithTag("TornPaper7"));
+         Destroy(g7);
       }
       if (PlayerPrefs.GetInt("p8") == 1)
       {
          Destroy(GameObject.FindWithTag("TornPaper8"));
+         Destroy(g8);
       }
       if (PlayerPrefs.GetInt("p9") == 1)
       {
          Destroy(GameObject.FindWithTag("TornPaper9"));
+         Destroy(g9);
       }
       if (PlayerPrefs.GetInt("p10") == 1)
       {
          Destroy(GameObject.FindWithTag("TornPaper10"));
+         Destroy(g10);
       }
       
       atiPanel.SetActive(false);
