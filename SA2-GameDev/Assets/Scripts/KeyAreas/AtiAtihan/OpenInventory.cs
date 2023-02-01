@@ -65,6 +65,48 @@ public class OpenInventory : MonoBehaviour
          _isPage10Collected = (PlayerPrefs.GetInt("p10") != 0);
          PlayerPrefs.Save();
       }
+
+      if (PlayerPrefs.GetInt("p1") == 1)
+      {
+         Destroy(GameObject.FindWithTag("TornPaper"));
+      }
+      if (PlayerPrefs.GetInt("p2") == 1)
+      {
+         Destroy(GameObject.FindWithTag("TornPaper2"));
+      }
+      if (PlayerPrefs.GetInt("p3") == 1)
+      {
+         Destroy(GameObject.FindWithTag("TornPaper3"));
+      }
+      if (PlayerPrefs.GetInt("p4") == 1)
+      {
+         Destroy(GameObject.FindWithTag("TornPaper4"));
+      }
+      if(PlayerPrefs.GetInt("p5") == 1)
+      {
+         Destroy(GameObject.FindWithTag("TornPaper5"));
+      }
+      if (PlayerPrefs.GetInt("p6") == 1)
+      {
+         Destroy(GameObject.FindWithTag("TornPaper6"));
+      }
+      if (PlayerPrefs.GetInt("p7") == 1)
+      {
+         Destroy(GameObject.FindWithTag("TornPaper7"));
+      }
+      if (PlayerPrefs.GetInt("p8") == 1)
+      {
+         Destroy(GameObject.FindWithTag("TornPaper8"));
+      }
+      if (PlayerPrefs.GetInt("p9") == 1)
+      {
+         Destroy(GameObject.FindWithTag("TornPaper9"));
+      }
+      if (PlayerPrefs.GetInt("p10") == 1)
+      {
+         Destroy(GameObject.FindWithTag("TornPaper10"));
+      }
+      
       atiPanel.SetActive(false);
       florPanel.SetActive(false);
       panPanel.SetActive(false);

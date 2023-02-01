@@ -186,8 +186,8 @@ MonoBehaviour:
     y: 0
     width: 220
     height: 399.2
-  m_MinSize: {x: 201, y: 221}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 6}
   m_Panes:
   - {fileID: 6}
@@ -226,7 +226,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: f0adffff1ceeffff08fbffffba5f0000bc6300005e6a0000706b000084b10000c0b100009450010064520100385b01004a5c0100
+      m_ExpandedIDs: 3023ffffd057ffffd670ffff9a80ffff388bfffff0adffff1ceeffff08fbffffba5f0000bc6300005e6a0000706b000084b10000c0b100009450010064520100385b01004a5c0100729803003e9a030030a10300a6d90300f0df03003ce60300882e0400003d040088290500d42d05000038050022bb0600c8cd0600
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -525,9 +525,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 535.57855, y: 366.05627, z: -2.7990065}
+    m_Target: {x: 81.339836, y: -1.631927, z: -0.017061051}
     speed: 2
-    m_Value: {x: 535.57855, y: 366.05627, z: -2.7990065}
+    m_Value: {x: 81.339836, y: -1.631927, z: -0.017061051}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -578,9 +578,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 723.08093
+    m_Target: 2.5492694
     speed: 2
-    m_Value: 723.08093
+    m_Value: 2.5492694
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -824,8 +824,8 @@ MonoBehaviour:
     y: 399.2
     width: 1172.8
     height: 323.59998
-  m_MinSize: {x: 101, y: 121}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 12}
   m_Panes:
   - {fileID: 11}
@@ -873,21 +873,21 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Assets/Scripts
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scenes
+  - Assets/Scripts
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Raphael\OneDrive\Documents\GitHub\GeymDev\SA2-GameDev
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 751}
-    m_SelectedIDs: c4760000
-    m_LastClickedID: 30404
+    m_SelectedIDs: 44760000
+    m_LastClickedID: 30276
     m_ExpandedIDs: 00000000387600003a7600003c7600003e760000407600004276000044760000467600004876000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -916,7 +916,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000387600003a7600003c7600003e7600004076000042760000447600004676000048760000
+    m_ExpandedIDs: 00000000387600003a7600003c7600003e760000407600004276000044760000467600004876000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -968,7 +968,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 0}
+    m_ScrollPosition: {x: 0, y: 115.20001}
     m_GridSize: 64
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 367
