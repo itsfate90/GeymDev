@@ -18,8 +18,16 @@ public class HealthCount : MonoBehaviour
     {
         StartingSpawnPoint = transform.position;
         _isRespawnScreenActive = false;
-        Health =5;
-        FullHealth();
+        if (PlayerPrefs.GetInt("HPSave") == 1)
+        {
+            Health = (PlayerPrefs.GetInt("HPCount"));
+        }
+        else
+        {
+            Health =5;
+            FullHealth();
+        }
+       
     }
 
     private void Update()
@@ -122,6 +130,12 @@ public class HealthCount : MonoBehaviour
         Time.timeScale = 1f;
         transform.position = StartingSpawnPoint;
         Health = 5;
+    }
+
+    public void SaveHealthStatus()
+    {
+        PlayerPrefs.SetInt("HPSave",1);
+        PlayerPrefs.SetInt("HPCount", Health);
     }
     
 
