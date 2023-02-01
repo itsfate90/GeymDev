@@ -1,17 +1,19 @@
 using System;
 using System.Security.Cryptography.X509Certificates;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class HealthPotion : MonoBehaviour
 {
     private bool _hasAlreadyUsed;
-
+    
     private void Start()
     {
+        
         if (PlayerPrefs.GetInt("SavePotion") == 1)
         {
-            _hasAlreadyUsed = (PlayerPrefs.GetInt("Potion") != 0);
-            Debug.Log("You already picked up this potion");
+            _hasAlreadyUsed = (PlayerPrefs.GetInt("Potion")!=0);
+            
         }
     }
 
@@ -23,9 +25,6 @@ public class HealthPotion : MonoBehaviour
             Debug.Log("you picked up a HP");
             _hasAlreadyUsed = true;
         }
-            
-        
-        
     }
 
     public void SavePotionState()
@@ -33,4 +32,7 @@ public class HealthPotion : MonoBehaviour
         PlayerPrefs.SetInt("SavePotion", 1);
         PlayerPrefs.SetInt("Potion", _hasAlreadyUsed ? 1 : 0);
     }
+
+   
+   
 }
