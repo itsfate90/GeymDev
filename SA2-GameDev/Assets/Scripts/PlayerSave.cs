@@ -7,6 +7,8 @@ using Vector3 = UnityEngine.Vector3;
 
 public class PlayerSave : MonoBehaviour
 {
+  
+
   public float x, y, z;
   [SerializeField] private GameObject startButton;
   [SerializeField] private GameObject loadButton;
@@ -14,8 +16,6 @@ public class PlayerSave : MonoBehaviour
 
   private void Start()
   {
-    
-    
     if(PlayerPrefs.GetInt("Saved") == 1)
     {
       x = PlayerPrefs.GetFloat("x");
@@ -52,6 +52,7 @@ public class PlayerSave : MonoBehaviour
    PlayerPrefs.SetFloat("x",transform.position.x);
    PlayerPrefs.SetFloat("y", transform.position.y);
    PlayerPrefs.SetFloat("z", transform.position.z);
+   
    PlayerPrefs.SetInt("Saved", 1);
    PlayerPrefs.SetInt("savedScene", SceneManager.GetActiveScene().buildIndex);
    PlayerPrefs.Save();
