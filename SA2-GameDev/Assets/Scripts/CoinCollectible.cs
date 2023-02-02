@@ -18,11 +18,15 @@ public class CoinCollectible : MonoBehaviour
 
     private void Start()
     {
-        if (PlayerPrefs.GetInt("Stars") == 1)
+        if (PlayerPrefs.GetInt("Stars1") == 1)
         {
             _coins = PlayerPrefs.GetInt("CoinSaveCount");
             _paper = PlayerPrefs.GetInt("PageSaveCount");
             PlayerPrefs.Save();
+        }
+        if (_coins >= 35 && _paper == 3)
+        {
+            Instantiate(portal, new Vector3(1048, -2, 0), Quaternion.identity);
         }
 
     }
@@ -55,7 +59,7 @@ public class CoinCollectible : MonoBehaviour
 
     public void SaveCoinPaperCount()
     {
-        PlayerPrefs.SetInt("Stars", 1);
+        PlayerPrefs.SetInt("Stars1", 1);
         PlayerPrefs.SetInt("CoinSaveCount", _coins);
         PlayerPrefs.SetInt("PageSaveCount", _paper);
         PlayerPrefs.Save();
@@ -65,7 +69,7 @@ public class CoinCollectible : MonoBehaviour
     {
         coinText.text = "Coins: " + _coins;
         paperText.text = " Paper: " + _paper;
-        
+      
         if (_coins >= 10 && _coins < 20)
         {
             chest1.SetActive(true);
