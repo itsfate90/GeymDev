@@ -157,6 +157,7 @@ public class OpenInventory : MonoBehaviour
 
       Scene currentScene = SceneManager.GetActiveScene();
       string sceneName = currentScene.name;
+      
 
       //if (sceneName == "SampleScene")
      //{
@@ -164,21 +165,21 @@ public class OpenInventory : MonoBehaviour
          //_isPage2Collected = false;
          //_isPage3Collected = false;
       //}
-      //if (sceneName == "Area2")
-      //{
-         //_isPage1Collected = true;
-         //_isPage2Collected = true;
-         //_isPage3Collected = true;
-     // }
-     // else if (sceneName == "Area3")
-      //{
-        // _isPage1Collected = true;
-         //_isPage2Collected = true;
-         //_isPage3Collected = true;
-         //_isPage4Collected = true;
-         //_isPage5Collected = true;
-         //_isPage6Collected = true;
-     // }
+      if (sceneName == "Area2")
+      {
+         _isPage1Collected = true;
+         _isPage2Collected = true;
+         _isPage3Collected = true;
+      }
+     else if (sceneName == "Area3")
+      {
+        _isPage1Collected = true;
+         _isPage2Collected = true;
+         _isPage3Collected = true;
+         _isPage4Collected = true;
+         _isPage5Collected = true;
+         _isPage6Collected = true;
+      }
    }
 
    private void OnTriggerEnter2D(Collider2D col)
