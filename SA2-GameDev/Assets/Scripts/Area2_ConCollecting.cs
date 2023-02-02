@@ -84,4 +84,5 @@ public class Area2_ConCollecting : MonoBehaviour
             chest3.SetActive(true);
         }
     }
+    
 }
