@@ -25,6 +25,7 @@ public class PlayerTeleportation : MonoBehaviour
         if (collision.CompareTag("Teleporter"))
         {
             currentTeleporter = collision.gameObject;
+
         }
         
     }
