@@ -45,6 +45,8 @@ public class Area2_ConCollecting : MonoBehaviour
             _paper++;
         }
         if(_coins >= 10 && _paper==3 ){
+            PlayerPrefs.SetInt("CoinSaveCountA2",_coins);
+            PlayerPrefs.SetInt("PageSaveCountA2",_paper);
             Instantiate(portal,new Vector3(-1200,-1,0),Quaternion.identity);
         }
         //coinText.text="Coins:" + _coins;

@@ -50,6 +50,8 @@ public class CoinCollectible : MonoBehaviour
 
         if (_coins >= 35 && _paper == 3)
         {
+            PlayerPrefs.SetInt("CoinSaveCount", _coins);
+            PlayerPrefs.SetInt("PageSaveCount", _paper);
             Instantiate(portal, new Vector3(1048, -2, 0), Quaternion.identity);
         }
         //coinText.text="Coins:" + _coins;

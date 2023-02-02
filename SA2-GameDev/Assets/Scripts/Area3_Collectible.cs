@@ -158,6 +158,8 @@ public class Area3_Collectible : MonoBehaviour
 
     public void EndGame()
     {
+        PlayerPrefs.SetInt("CoinSaveCountA3",_coins);
+        PlayerPrefs.SetInt("PageSaveCountA3",_paper);
         SceneManager.LoadScene("Credits");
     }
 
