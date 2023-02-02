@@ -16,14 +16,21 @@ public class Area3_Collectible : MonoBehaviour
     [SerializeField] private GameObject returnButton;
     [SerializeField] private Button talkButton;
     [SerializeField] private GameObject indicator;
+    [SerializeField] private GameObject chest1;
+    [SerializeField] private GameObject chest2;
+    [SerializeField] private GameObject chest3;
     private bool _isPanelOpen;
     private bool _isPlayerClose;
     private bool isMobile;
 
     private void Start()
     {
-        _coins = PlayerPrefs.GetInt("CoinSaveCountA3");
-        _paper = PlayerPrefs.GetInt("PageSaveCountA3");
+        if (PlayerPrefs.GetInt("Stars3") == 1)
+        {
+            _coins = PlayerPrefs.GetInt("CoinSaveCountA3");
+            _paper = PlayerPrefs.GetInt("PageSaveCountA3");
+        }
+       
         PlayerPrefs.Save();
         #if UNITY_STANDALONE_WIN
         isMobile = false;
@@ -60,8 +67,8 @@ public class Area3_Collectible : MonoBehaviour
             indicator.SetActive(true);
         }
        
-        coinText.text="Coins:" + _coins;
-        paperText.text="Paper:"+_paper;
+        //coinText.text="Coins:" + _coins;
+       // paperText.text="Paper:"+_paper;
 
     }
 
@@ -115,6 +122,24 @@ public class Area3_Collectible : MonoBehaviour
 
         coinText.text = "Coins: " + _coins;
         paperText.text = " Paper: " + _paper;
+        if (_coins >= 10 && _coins < 20)
+        {
+            chest1.SetActive(true);
+            chest2.SetActive(false);
+            chest3.SetActive(false);
+        }
+        else if (_coins >= 20 && _coins <30)
+        {
+            chest1.SetActive(true);
+            chest2.SetActive(true);
+            chest3.SetActive(false);
+        }
+        else if (_coins >= 30)
+        {
+            chest1.SetActive(true);
+            chest2.SetActive(true);
+            chest3.SetActive(true);
+        }
 
 
 
@@ -138,10 +163,12 @@ public class Area3_Collectible : MonoBehaviour
 
     public void SaveCoinPaperCountA3()
     {
+        PlayerPrefs.SetInt("Stars3",1);
         PlayerPrefs.SetInt("CoinSaveCountA3",_coins);
         PlayerPrefs.SetInt("PageSaveCountA3",_paper);
         PlayerPrefs.Save();
     }
+   
     
 
     
