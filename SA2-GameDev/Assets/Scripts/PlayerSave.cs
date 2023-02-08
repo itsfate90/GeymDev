@@ -1,9 +1,5 @@
-using System;
-using System.Numerics;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.Serialization;
 using Vector3 = UnityEngine.Vector3;
 
 public class PlayerSave : MonoBehaviour
@@ -31,7 +27,7 @@ public class PlayerSave : MonoBehaviour
         PlayerPrefs.Save();
       }
 
-      if (PlayerPrefs.GetInt("Saved2") == 1)
+      else if (PlayerPrefs.GetInt("Saved2") == 1)
       {
         if (sceneName == "Area2")
         {
@@ -42,13 +38,13 @@ public class PlayerSave : MonoBehaviour
           PlayerPrefs.Save();
         }
       }
-      if (PlayerPrefs.GetInt("Saved3") == 1)
+      else if (PlayerPrefs.GetInt("Saved3") == 1)
       {
         if (sceneName == "Area3")
         {
-          x = PlayerPrefs.GetFloat("x2");
-          y = PlayerPrefs.GetFloat("y2");
-          z = PlayerPrefs.GetFloat("z2");
+          x = PlayerPrefs.GetFloat("x3");
+          y = PlayerPrefs.GetFloat("y3");
+          z = PlayerPrefs.GetFloat("z3");
           transform.position = new Vector3(x, y, z);
           PlayerPrefs.Save();
         }
@@ -101,8 +97,8 @@ public class PlayerSave : MonoBehaviour
     {
       PlayerPrefs.SetInt("Saved3", 1);
       PlayerPrefs.SetFloat("x3",transform.position.x);
-      PlayerPrefs.SetFloat("y3", transform.position.y);
-      PlayerPrefs.SetFloat("z3", transform.position.z);
+      PlayerPrefs.SetFloat("y3",transform.position.y);
+      PlayerPrefs.SetFloat("z3",transform.position.z);
     }
     
    
