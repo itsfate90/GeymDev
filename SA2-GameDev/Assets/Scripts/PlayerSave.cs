@@ -27,7 +27,7 @@ public class PlayerSave : MonoBehaviour
         PlayerPrefs.Save();
       }
 
-      else if (PlayerPrefs.GetInt("Saved2") == 1)
+      if (PlayerPrefs.GetInt("Saved2") == 1)
       {
         if (sceneName == "Area2")
         {
@@ -38,7 +38,7 @@ public class PlayerSave : MonoBehaviour
           PlayerPrefs.Save();
         }
       }
-      else if (PlayerPrefs.GetInt("Saved3") == 1)
+      if (PlayerPrefs.GetInt("Saved3") == 1)
       {
         if (sceneName == "Area3")
         {
